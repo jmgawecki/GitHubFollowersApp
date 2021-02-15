@@ -13,7 +13,7 @@ class FollowersCollectionHeaderView: UICollectionReusableView {
     let avatarImageView     = GFAvatarImageView(frame: .zero)
     let usernameLabel       = GFTitleLabel(textAlignment: .left, fontSize: 34)
     let nameLabel           = GFSecondaryTitleLabel(fontSize: 18)
-    let locationImageView   = UIImageView()
+    let locationImageView   = UIImageView(frame: .zero)
     let locationLabel       = GFSecondaryTitleLabel(fontSize: 18)
     let bioLabel            = GFBodyLabel(textAlignment: .left)
     
@@ -23,20 +23,24 @@ class FollowersCollectionHeaderView: UICollectionReusableView {
         super.init(frame: frame)
         addSubviews()
         layoutUI()
+        configureUIElements()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configureUIElements(with user: User) {
+    func set(with user: User) {
         avatarImageView.downloadImage(from: user.avatarUrl)
         usernameLabel.text              = user.login
         nameLabel.text                  = user.name ?? ""
         locationLabel.text              = user.location ?? "No location"
         bioLabel.text                   = user.bio ?? "No bio available"
+    }
+    
+    private func configureUIElements() {
         bioLabel.numberOfLines          = 3
-        locationImageView.image         = UIImage(systemName: "mapping.and.ellipse")
+        locationImageView.image         = UIImage(systemName: SFSymbols.location)
         locationImageView.tintColor     = .systemGreen
     }
     
@@ -48,7 +52,6 @@ class FollowersCollectionHeaderView: UICollectionReusableView {
         addSubview(locationImageView)
         addSubview(locationLabel)
         addSubview(bioLabel)
-        locationImageView.layer.borderWidth = 2
     }
     
     

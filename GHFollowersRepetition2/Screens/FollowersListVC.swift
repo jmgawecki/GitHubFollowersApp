@@ -131,7 +131,7 @@ class FollowersListVC: UIViewController {
                                                                      withReuseIdentifier: FollowersCollectionHeaderView.reuseId,
                                                                      for: indexPath) as! FollowersCollectionHeaderView
             
-            header.configureUIElements(with: self.user)
+            header.set(with: self.user)
             return header
     }
     }

@@ -17,7 +17,12 @@ enum PersistenceManager {
     static let defaults = UserDefaults.standard
     
     
+    
     /// Uses function retreiveFavorites() to retreive an  array of object from the User Default. Then, append/remove passed object to/from the array and uses function saveFavorites() to upload the updated array to User Default
+    /// - Parameters:
+    ///   - favorite: Specified favorite users that is going to be added/removed to/from Favorites
+    ///   - actionType: Specifies wether speicifed user is going to be added or retreived
+    ///   - completed: upon completion saves updated users array or return user readable error
     static func updateWith(favorite: User, actionType: PersistenceActionType, completed: @escaping(GFError?) -> Void) {
         retreiveFavorites { (result) in
             switch result {

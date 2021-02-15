@@ -8,9 +8,15 @@
 import UIKit
 
 class FavoritesVC: UIViewController {
+    // MARK: - Declarations
+    
     
     var followersTableView: UITableView!
     var favoritesArray:     [User] = []
+    
+    
+    // MARK: - Initialisers
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,12 +25,17 @@ class FavoritesVC: UIViewController {
         configureFollowersTableView()
     }
     
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getFavorites()
     }
     
-    func configureFollowersTableView() {
+    
+    // MARK: - Layout configurations
+    
+    
+    private func configureFollowersTableView() {
         followersTableView = UITableView(frame: view.bounds)
         followersTableView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(followersTableView)
@@ -35,7 +46,11 @@ class FavoritesVC: UIViewController {
         followersTableView.register(FavoriteCell.self, forCellReuseIdentifier: FavoriteCell.reuseId)
     }
     
-    func getFavorites() {
+    
+    // MARK: - Network Calls
+    
+    
+    private func getFavorites() {
         PersistenceManager.retreiveFavorites { [weak self] (result) in
             guard let self = self else { return }
             switch result {
@@ -55,10 +70,14 @@ class FavoritesVC: UIViewController {
 }
 
 
+// MARK: - Extensions
+
+
 extension FavoritesVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return favoritesArray.count
     }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: FavoriteCell.reuseId) as! FavoriteCell
@@ -66,6 +85,7 @@ extension FavoritesVC: UITableViewDelegate, UITableViewDataSource {
         cell.set(on: favorite)
         return cell
     }
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let favorite = favoritesArray[indexPath.row]

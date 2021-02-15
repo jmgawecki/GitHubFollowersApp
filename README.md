@@ -14,3 +14,6 @@ Technology used:
 - Night/Light mode UI adjustment
 
 Some small issues exist that has not been resolved yet
+
+Please follow the link to see the short video:
+https://drive.google.com/file/d/1LS3nAR4leLzbNQEtGjjGLKtmgNBfMvEF/view?usp=sharing

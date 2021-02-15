@@ -8,20 +8,27 @@
 import UIKit
 
 class GFUserInfoHeaderVC: UIViewController {
+    // MARK: - Declarations
     
-    let avatarImageView     = GFAvatarImageView(frame: .zero)
+    
+    let avatarImgV          = GFAvatarImageView(frame: .zero)
     let usernameLabel       = GFTitleLabel(textAlignment: .left, fontSize: 34)
     let nameLabel           = GFSecondaryTitleLabel(fontSize: 18)
-    let locationImageView   = UIImageView(frame: .zero)
+    let locationImgV        = UIImageView(frame: .zero)
     let locationLabel       = GFSecondaryTitleLabel(fontSize: 18)
     let bioLabel            = GFBodyLabel(textAlignment: .left)
     
     var user: User!
     
+    
+    // MARK: - Initialisers
+    
+    
     init(user: User) {
         super.init(nibName: nil, bundle: nil)
         self.user = user
     }
+    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -36,63 +43,69 @@ class GFUserInfoHeaderVC: UIViewController {
 
     }
     
-    func configureUIElements() {
-        avatarImageView.downloadImage(from: user.avatarUrl)
+    
+    // MARK: - Layout configurations
+    
+    
+    private func configureUIElements() {
+        avatarImgV.downloadImage(from: user.avatarUrl)
         usernameLabel.text  = user.login
         nameLabel.text      = user.name ?? ""
         locationLabel.text  = user.location ?? "No location available"
         bioLabel.text       = user.bio ?? "No bio available"
         bioLabel.numberOfLines = 3
-        locationImageView.image = UIImage(systemName: SFSymbols.location)
-        locationImageView.tintColor = .systemGreen
+        locationImgV.image = UIImage(systemName: SFSymbols.location)
+        locationImgV.tintColor = .systemGreen
     
     }
     
-    func addSubview() {
-        view.addSubview(avatarImageView)
+    
+    private func addSubview() {
+        view.addSubview(avatarImgV)
         view.addSubview(usernameLabel)
         view.addSubview(nameLabel)
-        view.addSubview(locationImageView)
+        view.addSubview(locationImgV)
         view.addSubview(locationLabel)
         view.addSubview(bioLabel)
     }
     
-    func layoutUI() {
+    
+    private func layoutUI() {
         let padding: CGFloat            = 20
         let textImagePadding: CGFloat   = 12
         
-        locationImageView.translatesAutoresizingMaskIntoConstraints = false
+        locationImgV.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            avatarImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: padding),
-            avatarImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
-            avatarImageView.heightAnchor.constraint(equalToConstant: 90),
-            avatarImageView.widthAnchor.constraint(equalToConstant: 90),
+            avatarImgV.topAnchor.constraint         (equalTo: view.topAnchor, constant: padding),
+            avatarImgV.leadingAnchor.constraint     (equalTo: view.leadingAnchor, constant: padding),
+            avatarImgV.heightAnchor.constraint      (equalToConstant: 90),
+            avatarImgV.widthAnchor.constraint       (equalToConstant: 90),
             
-            usernameLabel.topAnchor.constraint(equalTo: avatarImageView.topAnchor),
-            usernameLabel.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: textImagePadding),
-            usernameLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
-            usernameLabel.heightAnchor.constraint(equalToConstant: 38),
+            usernameLabel.topAnchor.constraint      (equalTo: avatarImgV.topAnchor),
+            usernameLabel.leadingAnchor.constraint  (equalTo: avatarImgV.trailingAnchor, constant: textImagePadding),
+            usernameLabel.trailingAnchor.constraint (equalTo: view.trailingAnchor, constant: -padding),
+            usernameLabel.heightAnchor.constraint   (equalToConstant: 38),
             
-            nameLabel.centerYAnchor.constraint(equalTo: avatarImageView.centerYAnchor, constant: 8),
-            nameLabel.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: textImagePadding),
-            nameLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
-            nameLabel.heightAnchor.constraint(equalToConstant: 20),
+            nameLabel.centerYAnchor.constraint      (equalTo: avatarImgV.centerYAnchor, constant: 8),
+            nameLabel.leadingAnchor.constraint      (equalTo: avatarImgV.trailingAnchor, constant: textImagePadding),
+            nameLabel.trailingAnchor.constraint     (equalTo: view.trailingAnchor, constant: -padding),
+            nameLabel.heightAnchor.constraint       (equalToConstant: 20),
             
-            locationImageView.bottomAnchor.constraint(equalTo: avatarImageView.bottomAnchor),
-            locationImageView.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: textImagePadding),
-            locationImageView.heightAnchor.constraint(equalToConstant: 20),
-            locationImageView.widthAnchor.constraint(equalToConstant: 20),
+            locationImgV.bottomAnchor.constraint    (equalTo: avatarImgV.bottomAnchor),
+            locationImgV.leadingAnchor.constraint   (equalTo: avatarImgV.trailingAnchor, constant: textImagePadding),
+            locationImgV.heightAnchor.constraint    (equalToConstant: 20),
+            locationImgV.widthAnchor.constraint     (equalToConstant: 20),
             
-            locationLabel.centerYAnchor.constraint(equalTo: locationImageView.centerYAnchor),
-            locationLabel.leadingAnchor.constraint(equalTo: locationImageView.trailingAnchor, constant: 5),
-            locationLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: padding),
-            locationLabel.heightAnchor.constraint(equalToConstant: 20),
+            locationLabel.centerYAnchor.constraint  (equalTo: locationImgV.centerYAnchor),
+            locationLabel.leadingAnchor.constraint  (equalTo: locationImgV.trailingAnchor, constant: 5),
+            locationLabel.trailingAnchor.constraint (equalTo: view.trailingAnchor, constant: padding),
+            locationLabel.heightAnchor.constraint   (equalToConstant: 20),
             
-            bioLabel.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: textImagePadding),
-            bioLabel.leadingAnchor.constraint(equalTo: avatarImageView.leadingAnchor, constant: 0),
-            bioLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
-            bioLabel.heightAnchor.constraint(equalToConstant: 60)
+            bioLabel.topAnchor.constraint           (equalTo: avatarImgV.bottomAnchor, constant: textImagePadding),
+            bioLabel.leadingAnchor.constraint       (equalTo: avatarImgV.leadingAnchor),
+            bioLabel.trailingAnchor.constraint      (equalTo: view.trailingAnchor, constant: -padding),
+            bioLabel.heightAnchor.constraint        (equalToConstant: 60)
         ])
     }
     

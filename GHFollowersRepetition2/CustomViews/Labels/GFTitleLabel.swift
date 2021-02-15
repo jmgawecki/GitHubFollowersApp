@@ -8,6 +8,8 @@
 import UIKit
 
 class GFTitleLabel: UILabel {
+    // MARK: - Initialisers
+    
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,6 +27,10 @@ class GFTitleLabel: UILabel {
         configure()
     }
     
+    
+    // MARK: - Configurations
+    
+    
     private func configure() {
         textColor = .label
         adjustsFontSizeToFitWidth = true
@@ -32,5 +38,4 @@ class GFTitleLabel: UILabel {
         lineBreakMode = .byTruncatingTail
         translatesAutoresizingMaskIntoConstraints = false
     }
-
 }

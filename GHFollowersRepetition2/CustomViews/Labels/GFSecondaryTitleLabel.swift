@@ -8,6 +8,8 @@
 import UIKit
 
 class GFSecondaryTitleLabel: UILabel {
+    // MARK: - Initialisers
+    
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -23,6 +25,10 @@ class GFSecondaryTitleLabel: UILabel {
         font = UIFont.systemFont(ofSize: fontSize, weight: .medium)
         configure()
     }
+    
+    
+    // MARK: - Configurations
+    
 
     private func configure() {
         translatesAutoresizingMaskIntoConstraints = false

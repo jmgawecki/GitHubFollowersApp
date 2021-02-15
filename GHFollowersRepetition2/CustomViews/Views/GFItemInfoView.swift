@@ -8,6 +8,8 @@
 import UIKit
 
 class GFItemInfoView: UIView {
+    // MARK: - Declarations
+    
     
     enum ItemInfoType { case repos, gists, following, followers }
     
@@ -15,14 +17,23 @@ class GFItemInfoView: UIView {
     let titleLabel = GFTitleLabel(textAlignment: .left, fontSize: 14)
     let countLabel = GFTitleLabel(textAlignment: .center, fontSize: 14)
     
+    
+    // MARK: - Initialisers
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
     }
     
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    
+    // MARK: - Configurations
+    
     
     private func configure() {
         self.addSubview(symbolImageView)
@@ -31,25 +42,29 @@ class GFItemInfoView: UIView {
         
         symbolImageView.translatesAutoresizingMaskIntoConstraints = false
         symbolImageView.contentMode = .scaleAspectFill
-        symbolImageView.tintColor = .label
+        symbolImageView.tintColor   = .label
         
         NSLayoutConstraint.activate([
-            symbolImageView.topAnchor.constraint(equalTo: self.topAnchor),
-            symbolImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            symbolImageView.heightAnchor.constraint(equalToConstant: 20),
-            symbolImageView.widthAnchor.constraint(equalToConstant: 20),
+            symbolImageView.topAnchor.constraint        (equalTo: self.topAnchor),
+            symbolImageView.leadingAnchor.constraint    (equalTo: self.leadingAnchor),
+            symbolImageView.heightAnchor.constraint     (equalToConstant: 20),
+            symbolImageView.widthAnchor.constraint      (equalToConstant: 20),
             
-            titleLabel.centerYAnchor.constraint(equalTo: symbolImageView.centerYAnchor),
-            titleLabel.leadingAnchor.constraint(equalTo: symbolImageView.trailingAnchor, constant: 12),
-            titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            titleLabel.heightAnchor.constraint(equalToConstant: 18),
+            titleLabel.centerYAnchor.constraint         (equalTo: symbolImageView.centerYAnchor),
+            titleLabel.leadingAnchor.constraint         (equalTo: symbolImageView.trailingAnchor, constant: 12),
+            titleLabel.trailingAnchor.constraint        (equalTo: self.trailingAnchor),
+            titleLabel.heightAnchor.constraint          (equalToConstant: 18),
             
-            countLabel.topAnchor.constraint(equalTo: symbolImageView.bottomAnchor, constant: 4),
-            countLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            countLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            countLabel.heightAnchor.constraint(equalToConstant: 18)
+            countLabel.topAnchor.constraint             (equalTo: symbolImageView.bottomAnchor, constant: 4),
+            countLabel.leadingAnchor.constraint         (equalTo: self.leadingAnchor),
+            countLabel.trailingAnchor.constraint        (equalTo: self.trailingAnchor),
+            countLabel.heightAnchor.constraint          (equalToConstant: 18)
         ])
     }
+    
+    
+    // MARK: - Called outside
+    
     
     func set(itemInfoType: ItemInfoType, with count: Int) {
         switch itemInfoType {
@@ -68,5 +83,4 @@ class GFItemInfoView: UIView {
         }
         countLabel.text             = String(count)
     }
-    
 }

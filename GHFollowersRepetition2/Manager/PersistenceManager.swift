@@ -16,6 +16,8 @@ enum PersistenceActionType { case add, remove }
 enum PersistenceManager {
     static let defaults = UserDefaults.standard
     
+    
+    /// Uses function retreiveFavorites() to retreive an  array of object from the User Default. Then, append/remove passed object to/from the array and uses function saveFavorites() to upload the updated array to User Default
     static func updateWith(favorite: User, actionType: PersistenceActionType, completed: @escaping(GFError?) -> Void) {
         retreiveFavorites { (result) in
             switch result {
@@ -35,6 +37,8 @@ enum PersistenceManager {
         }
     }
     
+    
+    /// Retreive an array of object from User Default
     static func retreiveFavorites(completed: @escaping(Result<[User], GFError>) -> Void) {
         guard let favoritesData = defaults.object(forKey: KeyObjects.favorites) as? Data else { completed(.success([])); return}
         
@@ -47,6 +51,8 @@ enum PersistenceManager {
         }
     }
     
+    
+    /// Saves array of object to User Default
     static func saveFavorites(followers: [User]) -> GFError? {
         do {
             let encoder = JSONEncoder()

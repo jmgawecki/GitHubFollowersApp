@@ -7,9 +7,7 @@
 
 import UIKit
 
-enum KeyObjects {
-    static let favorites = "favorites"
-}
+enum KeyObjects { static let favorites = "favorites" }
 
 enum PersistenceActionType { case add, remove }
 

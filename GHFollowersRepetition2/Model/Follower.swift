@@ -8,6 +8,6 @@
 import UIKit
 
 struct Follower: Codable, Hashable {
-    let login: String
-    let avatarUrl: String
+    let login:      String
+    let avatarUrl:  String
 }

@@ -156,11 +156,11 @@
 			isa = PBXGroup;
 			children = (
 				EF41B90625894DBE002D94B4 /* Info.plist */,
-				EF41B93725894E15002D94B4 /* Extenstions */,
-				EF41B93625894E09002D94B4 /* CustomViews */,
 				EF41B93525894E05002D94B4 /* Manager */,
 				EF41B93425894E01002D94B4 /* Model */,
 				EF41B93325894DF9002D94B4 /* Utilities */,
+				EF41B93625894E09002D94B4 /* CustomViews */,
+				EF59C55625895DFE002FDE69 /* ViewControllers */,
 				EF41B92E25894DD2002D94B4 /* Screens */,
 				EF41B93225894DE6002D94B4 /* Support */,
 			);
@@ -239,23 +239,15 @@
 		EF41B93625894E09002D94B4 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				EF59C57625896F82002FDE69 /* Cell */,
 				EF5CD1F925CB0C6D002671D0 /* CollectionReusableView */,
 				EFFA0681258B9085008CA770 /* ImageViews */,
-				EF59C57625896F82002FDE69 /* Cell */,
-				EF59C55625895DFE002FDE69 /* ViewControllers */,
 				EF59C54825895A1F002FDE69 /* Labels */,
-				EF59C53F258959F2002FDE69 /* Views */,
-				EF41B9572589525B002D94B4 /* Buttons */,
 				EF41B95625895254002D94B4 /* TextFields */,
+				EF41B9572589525B002D94B4 /* Buttons */,
+				EF59C53F258959F2002FDE69 /* Views */,
 			);
 			path = CustomViews;
-			sourceTree = "<group>";
-		};
-		EF41B93725894E15002D94B4 /* Extenstions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extenstions;
 			sourceTree = "<group>";
 		};
 		EF41B95625895254002D94B4 /* TextFields */ = {

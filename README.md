@@ -10,6 +10,7 @@ Technology used:
 - Diffable Data Source
 - Compositional Layout
 - Collection View's supplementary view
+- Unit Testing
 - UI adjustment to screen sizes (including iPhone SE 1st gen. and iPhone 8 Zoomed)
 - Night/Light mode UI adjustment
 

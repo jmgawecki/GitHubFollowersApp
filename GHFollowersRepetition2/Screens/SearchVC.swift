@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SearchVC: UIViewController {
+final class SearchVC: UIViewController {
     // MARK: - Declarations
     
     
@@ -39,7 +39,7 @@ class SearchVC: UIViewController {
     // MARK: - Objectives
     
     
-    @objc func pushVC() {
+    @objc private func pushVC() {
         guard self.isUsernameEntered else { self.presentGFAlerOnMainThred(title: "Ops", message: "You forgot to type username! Go ahead and types someone's username 😇", button: "Okey"); return }
         showLoadingView()
         NetworkManager.shared.getUserInfo(username: usernameTextField.text!) { [weak self] (result) in
@@ -80,7 +80,7 @@ class SearchVC: UIViewController {
             logoImage.topAnchor.constraint                  (equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 80),
             logoImage.centerXAnchor.constraint              (equalTo: view.centerXAnchor),
             logoImage.heightAnchor.constraint               (equalToConstant: 200),
-            logoImage.widthAnchor.constraint                (equalToConstant: 200)
+            logoImage.widthAnchor.constraint                (equalToConstant: 200),
         ])
     }
     
@@ -92,7 +92,7 @@ class SearchVC: UIViewController {
             usernameTextField.topAnchor.constraint          (equalTo: logoImage.bottomAnchor, constant: 48),
             usernameTextField.leadingAnchor.constraint      (equalTo: view.leadingAnchor, constant: 50),
             usernameTextField.trailingAnchor.constraint     (equalTo: view.trailingAnchor, constant: -50),
-            usernameTextField.heightAnchor.constraint       (equalToConstant: 50)
+            usernameTextField.heightAnchor.constraint       (equalToConstant: 50),
         ])
     }
     
@@ -104,7 +104,7 @@ class SearchVC: UIViewController {
             searchUsernameButton.bottomAnchor.constraint    (equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50),
             searchUsernameButton.leadingAnchor.constraint   (equalTo: view.leadingAnchor, constant: 50),
             searchUsernameButton.trailingAnchor.constraint  (equalTo: view.trailingAnchor, constant: -50),
-            searchUsernameButton.heightAnchor.constraint    (equalToConstant: 50)
+            searchUsernameButton.heightAnchor.constraint    (equalToConstant: 50),
         ])
     }
 }

@@ -6,7 +6,8 @@
 //
 
 import XCTest
-@testable import GHFollowersRepetition2
+//@testable import GHFollowersRepetition2
+//@testable import
 
 class GHFollowersRepetition2Tests: XCTestCase {
     var urlTest: URLSession!

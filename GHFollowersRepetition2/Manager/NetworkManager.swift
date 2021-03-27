@@ -20,9 +20,9 @@ class NetworkManager {
     
     /// Makes a network call in order to get array of followers of some user. Downloads up to 100 followers per page.
     /// - Parameters:
-    ///   - username: Searching for followers based on specified user's username
-    ///   - page: Pagination parameter
-    ///   - completed: Array of followers upon completion or custom user readable error.
+    ///   - username:   Searching for followers based on specified user's username
+    ///   - page:       Pagination parameter
+    ///   - completed:  Array of followers upon completion or custom user readable error.
     func getFollowers(username: String, page: Int, completed: @escaping(Result<[Follower],GFError>) -> Void) {
         let endpoint = baserURL + "\(username)/followers?per_page=100&page=\(page)"
         guard let url = URL(string: endpoint) else { completed(.failure(.invalidUsername)); return}
@@ -68,5 +68,9 @@ class NetworkManager {
             } catch { completed(.failure(.invalidData)) }
         }
         task.resume()
+    }
+    
+    func downloadImageForListView() {
+
     }
 }

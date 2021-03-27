@@ -22,9 +22,9 @@ class FollowersListVC: UIViewController {
     
     enum Section { case main }
     
-    var collectionView: UICollectionView!
-    var dataSource: UICollectionViewDiffableDataSource<Section, Follower>!
-    var snapshot: NSDiffableDataSourceSnapshot<Section, Follower>!
+    var collectionView:     UICollectionView!
+    var dataSource:         UICollectionViewDiffableDataSource<Section, Follower>!
+    var snapshot:           NSDiffableDataSourceSnapshot<Section, Follower>!
 
     var page = 1
     
@@ -45,7 +45,6 @@ class FollowersListVC: UIViewController {
         getFollowers(page: page, on: user.login)
         configureCollectionView()
         configureDataSource()
-        
     }
     
     
@@ -111,9 +110,11 @@ class FollowersListVC: UIViewController {
     
     
     private func configureVC() {
-        view.backgroundColor = .systemBackground
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
+        view.backgroundColor                                    = .systemBackground
+        navigationController?.navigationBar.prefersLargeTitles  = true
+        navigationItem.rightBarButtonItem                       = UIBarButtonItem(barButtonSystemItem: .add,
+                                                                                  target: self,
+                                                                                  action: #selector(addButtonTapped))
         configureSearchController()
     }
    

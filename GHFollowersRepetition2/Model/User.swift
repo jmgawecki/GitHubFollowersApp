@@ -7,16 +7,30 @@
 
 import UIKit
 
-struct User: Codable, Hashable {
-    let login:          String
-    let avatarUrl:      String
-    let name:           String?
-    let location:       String?
-    let bio:            String?
-    let publicRepos:    Int
-    let publicGists:    Int
-    let htmlUrl:        String
-    let followers:      Int
-    let following:      Int
-    let createdAt:      String
+protocol UserProtocol {
+    var login:          String  { get set }
+    var avatarUrl:      String  { get set }
+    var name:           String? { get set }
+    var location:       String? { get set }
+    var bio:            String? { get set }
+    var publicRepos:    Int     { get set }
+    var publicGists:    Int     { get set }
+    var htmlUrl:        String  { get set }
+    var followers:      Int     { get set }
+    var following:      Int     { get set }
+    var createdAt:      String  { get set }
+}
+
+struct User: Codable, Hashable, UserProtocol {
+    var login:          String
+    var avatarUrl:      String
+    var name:           String?
+    var location:       String?
+    var bio:            String?
+    var publicRepos:    Int
+    var publicGists:    Int
+    var htmlUrl:        String
+    var followers:      Int
+    var following:      Int
+    var createdAt:      String
 }

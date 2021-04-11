@@ -40,7 +40,13 @@ final class SearchVC: UIViewController {
     
     
     @objc private func pushVC() {
-        guard self.isUsernameEntered else { self.presentGFAlerOnMainThred(title: "Ops", message: "You forgot to type username! Go ahead and types someone's username 😇", button: "Okey"); return }
+        guard self.isUsernameEntered else {
+            self.presentGFAlerOnMainThred(title: "Ops",
+                                          message: "You forgot to type username! Go ahead and types someone's username 😇",
+                                          button: "Okey")
+            return
+        }
+        
         showLoadingView()
         NetworkManager.shared.getUserInfo(username: usernameTextField.text!) { [weak self] (result) in
             guard let self = self else { return }
@@ -52,8 +58,11 @@ final class SearchVC: UIViewController {
                     followersVC.user        = user
                     self.navigationController?.pushViewController(followersVC, animated: true)
                 }
+                
             case .failure(let error):
-                self.presentGFAlerOnMainThred(title: "Ops!", message: error.rawValue, button: "Okay")
+                self.presentGFAlerOnMainThred(title: "Ops!",
+                                              message: error.rawValue,
+                                              button: "Okay")
             }
         }
     }

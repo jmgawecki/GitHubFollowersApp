@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF022CCB262327C300669EDE /* SearchVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF022CCA262327C300669EDE /* SearchVCTests.swift */; };
+		EF022CD026232B6600669EDE /* GFTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF022CCF26232B6600669EDE /* GFTextFieldTests.swift */; };
+		EF022CD526232BDB00669EDE /* GFAlertVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF022CD426232BDB00669EDE /* GFAlertVCTests.swift */; };
+		EF022CDA26232C9800669EDE /* GFItemInfoViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF022CD926232C9800669EDE /* GFItemInfoViewTests.swift */; };
+		EF022CE826232DAD00669EDE /* FollowersListVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF022CE726232DAD00669EDE /* FollowersListVCTests.swift */; };
+		EF022CF02623352A00669EDE /* GFUserInfoHeaderVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF022CEF2623352A00669EDE /* GFUserInfoHeaderVCTests.swift */; };
+		EF022CF52623361D00669EDE /* CellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF022CF42623361D00669EDE /* CellTests.swift */; };
+		EF022CFA2623372F00669EDE /* GFItemInfoVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF022CF92623372F00669EDE /* GFItemInfoVCTests.swift */; };
+		EF022D022623393F00669EDE /* FavoritesVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF022D012623393F00669EDE /* FavoritesVCTests.swift */; };
+		EF022D0726233A8E00669EDE /* GFEmptyStateViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF022D0626233A8E00669EDE /* GFEmptyStateViewTests.swift */; };
+		EF022D0C26233B4700669EDE /* UserInfoVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF022D0B26233B4700669EDE /* UserInfoVCTests.swift */; };
+		EF022D1126233D5F00669EDE /* FollowersCollectionHeaderViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF022D1026233D5F00669EDE /* FollowersCollectionHeaderViewTests.swift */; };
 		EF039116258AA23400C0536C /* GFItemInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF039115258AA23400C0536C /* GFItemInfoView.swift */; };
 		EF41B8F925894DBD002D94B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF41B8F825894DBD002D94B4 /* AppDelegate.swift */; };
 		EF41B8FB25894DBD002D94B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF41B8FA25894DBD002D94B4 /* SceneDelegate.swift */; };
@@ -64,6 +76,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF022CCA262327C300669EDE /* SearchVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVCTests.swift; sourceTree = "<group>"; };
+		EF022CCF26232B6600669EDE /* GFTextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextFieldTests.swift; sourceTree = "<group>"; };
+		EF022CD426232BDB00669EDE /* GFAlertVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertVCTests.swift; sourceTree = "<group>"; };
+		EF022CD926232C9800669EDE /* GFItemInfoViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFItemInfoViewTests.swift; sourceTree = "<group>"; };
+		EF022CE726232DAD00669EDE /* FollowersListVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersListVCTests.swift; sourceTree = "<group>"; };
+		EF022CEF2623352A00669EDE /* GFUserInfoHeaderVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFUserInfoHeaderVCTests.swift; sourceTree = "<group>"; };
+		EF022CF42623361D00669EDE /* CellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTests.swift; sourceTree = "<group>"; };
+		EF022CF92623372F00669EDE /* GFItemInfoVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFItemInfoVCTests.swift; sourceTree = "<group>"; };
+		EF022D012623393F00669EDE /* FavoritesVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVCTests.swift; sourceTree = "<group>"; };
+		EF022D0626233A8E00669EDE /* GFEmptyStateViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFEmptyStateViewTests.swift; sourceTree = "<group>"; };
+		EF022D0B26233B4700669EDE /* UserInfoVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoVCTests.swift; sourceTree = "<group>"; };
+		EF022D1026233D5F00669EDE /* FollowersCollectionHeaderViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersCollectionHeaderViewTests.swift; sourceTree = "<group>"; };
 		EF039115258AA23400C0536C /* GFItemInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFItemInfoView.swift; sourceTree = "<group>"; };
 		EF41B8F525894DBD002D94B4 /* GHFollowersRepetition2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHFollowersRepetition2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF41B8F825894DBD002D94B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +158,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF022CDE26232D7800669EDE /* CustomViewsTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF022CD926232C9800669EDE /* GFItemInfoViewTests.swift */,
+				EF022CD426232BDB00669EDE /* GFAlertVCTests.swift */,
+				EF022CCF26232B6600669EDE /* GFTextFieldTests.swift */,
+				EF022CEF2623352A00669EDE /* GFUserInfoHeaderVCTests.swift */,
+				EF022CF42623361D00669EDE /* CellTests.swift */,
+				EF022CF92623372F00669EDE /* GFItemInfoVCTests.swift */,
+				EF022D0626233A8E00669EDE /* GFEmptyStateViewTests.swift */,
+				EF022D0B26233B4700669EDE /* UserInfoVCTests.swift */,
+				EF022D1026233D5F00669EDE /* FollowersCollectionHeaderViewTests.swift */,
+			);
+			path = CustomViewsTests;
+			sourceTree = "<group>";
+		};
+		EF022CDF26232D8900669EDE /* NetworkCallsTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF79DFFC260E0425001B410D /* NetworkCallUnitTest.swift */,
+			);
+			path = NetworkCallsTests;
+			sourceTree = "<group>";
+		};
+		EF022CE626232D9700669EDE /* ScreensTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF022CCA262327C300669EDE /* SearchVCTests.swift */,
+				EF022CE726232DAD00669EDE /* FollowersListVCTests.swift */,
+				EF022D012623393F00669EDE /* FavoritesVCTests.swift */,
+			);
+			path = ScreensTests;
+			sourceTree = "<group>";
+		};
 		EF41B8EC25894DBD002D94B4 = {
 			isa = PBXGroup;
 			children = (
@@ -172,9 +230,11 @@
 		EF41B90E25894DBE002D94B4 /* GHFollowersRepetition2Tests */ = {
 			isa = PBXGroup;
 			children = (
+				EF022CE626232D9700669EDE /* ScreensTests */,
+				EF022CDF26232D8900669EDE /* NetworkCallsTests */,
+				EF022CDE26232D7800669EDE /* CustomViewsTests */,
 				EF41B90F25894DBE002D94B4 /* GHFollowersRepetition2Tests.swift */,
 				EF41B91125894DBE002D94B4 /* Info.plist */,
-				EF79DFFC260E0425001B410D /* NetworkCallUnitTest.swift */,
 			);
 			path = GHFollowersRepetition2Tests;
 			sourceTree = "<group>";
@@ -527,7 +587,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF022CF52623361D00669EDE /* CellTests.swift in Sources */,
+				EF022D0726233A8E00669EDE /* GFEmptyStateViewTests.swift in Sources */,
+				EF022CDA26232C9800669EDE /* GFItemInfoViewTests.swift in Sources */,
+				EF022CFA2623372F00669EDE /* GFItemInfoVCTests.swift in Sources */,
+				EF022CCB262327C300669EDE /* SearchVCTests.swift in Sources */,
+				EF022D1126233D5F00669EDE /* FollowersCollectionHeaderViewTests.swift in Sources */,
 				EF79DFFD260E0425001B410D /* NetworkCallUnitTest.swift in Sources */,
+				EF022CD526232BDB00669EDE /* GFAlertVCTests.swift in Sources */,
+				EF022D0C26233B4700669EDE /* UserInfoVCTests.swift in Sources */,
+				EF022CD026232B6600669EDE /* GFTextFieldTests.swift in Sources */,
+				EF022D022623393F00669EDE /* FavoritesVCTests.swift in Sources */,
+				EF022CF02623352A00669EDE /* GFUserInfoHeaderVCTests.swift in Sources */,
+				EF022CE826232DAD00669EDE /* FollowersListVCTests.swift in Sources */,
 				EF41B91025894DBE002D94B4 /* GHFollowersRepetition2Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

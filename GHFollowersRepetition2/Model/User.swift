@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 protocol UserProtocol {
     var login:          String  { get set }
     var avatarUrl:      String  { get set }
@@ -21,6 +22,7 @@ protocol UserProtocol {
     var createdAt:      String  { get set }
 }
 
+
 struct User: Codable, Hashable, UserProtocol {
     var login:          String
     var avatarUrl:      String
@@ -34,3 +36,5 @@ struct User: Codable, Hashable, UserProtocol {
     var following:      Int
     var createdAt:      String
 }
+
+

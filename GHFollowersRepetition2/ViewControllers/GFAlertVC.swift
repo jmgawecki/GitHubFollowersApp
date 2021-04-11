@@ -18,9 +18,9 @@ class GFAlertVC: UIViewController {
     
     let padding: CGFloat    = 20
     
-    var alertTitle: String?
-    var message:    String?
-    var buttonLabel:String?
+    var alertTitle:         String?
+    var message:            String?
+    var buttonLabel:        String?
     
     
     // MARK: - Initialisers

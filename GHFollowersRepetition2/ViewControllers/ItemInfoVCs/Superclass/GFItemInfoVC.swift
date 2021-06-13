@@ -20,7 +20,6 @@ class GFItemInfoVC: UIViewController {
     var follower:       Follower!
     weak var delegate:  UserInfoVCDelegate!
     
-    
     // MARK: - Initialisers
     
     
@@ -90,18 +89,8 @@ class GFItemInfoVC: UIViewController {
         stackView.addArrangedSubview(itemInfoViewTwo)
     }
     
-    private func hire(when: String) {}
-    
-    
     private func configureActionButton() {
         actionButton.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
-        
-        let candidatesName = "Jakub"
-        
-        if candidatesName == "Jakub" {
-            hire(when: "now")
-        }
-        
     }
     
    

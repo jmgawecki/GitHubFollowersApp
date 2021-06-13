@@ -25,14 +25,28 @@ class NetworkManager {
     ///   - completed:  Array of followers upon completion or custom user readable error.
     func getFollowers(username: String, page: Int, completed: @escaping(Result<[Follower],GFError>) -> Void) {
         let endpoint = baserURL + "\(username)/followers?per_page=100&page=\(page)"
-        guard let url = URL(string: endpoint) else { completed(.failure(.invalidUsername)); return}
+        guard let url = URL(string: endpoint) else {
+           completed(.failure(.invalidUsername))
+           return
+           
+        }
         
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-            if let _ = error { completed(.failure(.unableToComplete))}
+            if let _ = error {
+               completed(.failure(.unableToComplete))
+               
+            }
             
-            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else { completed(.failure(.invalidResponse)); return}
+            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else { completed(.failure(.invalidResponse))
+               return
+               
+            }
             
-            guard let data = data else { completed(.failure(.invalidData)); return}
+            guard let data = data else {
+               completed(.failure(.invalidData))
+               return
+               
+            }
             
             do {
                 let decoder = JSONDecoder()
@@ -43,6 +57,26 @@ class NetworkManager {
         }
         task.resume()
     }
+   
+   func getFollowers(username: String, page: Int) async throws -> [Follower] {
+      let endpoint = baserURL + "\(username)/followers?per_page=100&page=\(page)"
+      
+      guard let url = URL(string: endpoint) else { throw GFError.invalidUsername }
+      let request = URLRequest.init(url: url)
+      
+      let (data, response) = try await URLSession.shared.data(for: request)
+      
+      guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+         throw GFError.invalidResponse
+      }
+      
+      do {
+         let decoder = JSONDecoder()
+         decoder.keyDecodingStrategy = .convertFromSnakeCase
+         let followers = try decoder.decode([Follower].self, from: data)
+         return followers
+      } catch { throw GFError.invalidData }
+   }
     
     
     /// Makes a network call in order to get specified user's information such as its location, repo count, gists count, bio etc.

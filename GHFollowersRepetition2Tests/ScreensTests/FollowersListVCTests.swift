@@ -111,5 +111,32 @@ class FollowersListVCTests: XCTestCase {
 //        XCTAssertEqual(sut.followers.count, 1)
 //        
 //    }
+    
+    
+    func testTitleIsNilAfterViewAppearing() {
+        // Arrange
+        let sut = FollowersListVC()
+        sut.title = "SomeTitleTest"
+        
+        
+        // Act
+        sut.viewWillAppear(true)
+        
+        
+        // Assert
+        XCTAssertNil(sut.title)
+    }
+    
+    
+    func testFollowerListVCCollectionView() {
+        // Arrange
+        let sut = FollowersListVC()
+        let follower = Follower(login: "jmgawecki", avatarUrl: "")
+        sut.followers = [follower]
+        
+        
+        // Act
+//        sut.
+    }
 
 }

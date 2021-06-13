@@ -11,6 +11,10 @@ import XCTest
 
 class GHFollowersRepetition2Tests: XCTestCase {
 
+   
+   func testNothing() {
+      print("tralalal")
+   }
     
 
 }

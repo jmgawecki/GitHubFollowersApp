@@ -22,7 +22,7 @@ class GFUserInfoHeaderVC: UIViewController {
     
     
     // MARK: - Initialisers
-    
+
     
     init(user: User) {
         super.init(nibName: nil, bundle: nil)

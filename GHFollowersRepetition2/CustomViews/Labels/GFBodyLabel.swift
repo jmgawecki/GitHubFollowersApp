@@ -27,7 +27,7 @@ class GFBodyLabel: UILabel {
     }
     
     
-    // MARK: - Configurations
+    // MARK: - Configurationsb
     
     
     private func configure() {

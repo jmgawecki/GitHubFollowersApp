@@ -10,8 +10,8 @@ import SafariServices
 
 // MARK: - Protocol and Delegates
 
-
-protocol UserInfoVCDelegate: class {
+ 
+protocol UserInfoVCDelegate: AnyObject {
     func didTapGitHubProfile(for user: User)
     func didTapGetFollowers(for user: User, with follower: Follower)
 }
@@ -30,7 +30,7 @@ class UserInfoVC: UIViewController {
     var username:       String!
     var follower:       Follower!
     var user:           User!
-    weak var delegate:  FollowerListDelegates!
+    weak var delegate:  FollowerListDelegates15!
     
     
     // MARK: - Initialisers

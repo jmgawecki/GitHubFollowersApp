@@ -19,11 +19,16 @@ class FollowerCell: UICollectionViewCell {
     
     // MARK: - Initialisers
     
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
-        configureFollowerCell()
     }
+
+   
+   override func layoutSubviews() {
+      super.layoutSubviews()
+      configureFollowerCell()
+   }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

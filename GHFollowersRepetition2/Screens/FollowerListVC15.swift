@@ -42,9 +42,10 @@ class FollowersListVC15: UIViewController {
    override func viewDidLoad() {
       super.viewDidLoad()
       configureVC()
-      getFollowers(page: page, on: user.login)
       configureCollectionView()
       configureDataSource()
+      updateData(with: followers)
+      getFollowers(page: page, on: user.login)
    }
    
    
@@ -54,6 +55,12 @@ class FollowersListVC15: UIViewController {
       title = nil
    }
    
+   init(with user: User) {
+      super.init(nibName: nil, bundle: nil)
+      self.user = user
+   }
+   
+   required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
    
    // MARK: - Objectives
    
@@ -61,7 +68,12 @@ class FollowersListVC15: UIViewController {
    @objc func addButtonTapped() {
       PersistenceManager.updateWith(favorite: user, actionType: .add) { [weak self] (error) in
          guard let self = self else { return }
-         guard let error = error else { self.presentGFAlerOnMainThred(title: "Horray!", message: "You have succesfully added an user to favorites", button: "Done"); return }
+         guard let error = error else {
+            self.presentGFAlerOnMainThred(title: "Horray!",
+                                          message: "You have succesfully added an user to favorites",
+                                          button: "Done")
+            return
+         }
          self.presentGFAlerOnMainThred(title: "Ops", message: error.rawValue, button: "Shame.")
       }
    }
@@ -83,7 +95,7 @@ class FollowersListVC15: UIViewController {
    }
    
    
-   private func setInitialData() {
+   private func updateData(with followers: [Follower]) {
       snapshot = NSDiffableDataSourceSnapshot<Section, Follower.ID>()
       
       snapshot.appendSections([.main])
@@ -94,14 +106,9 @@ class FollowersListVC15: UIViewController {
       dataSource.apply(snapshot, animatingDifferences: true)
    }
    
-   private func shuffleData() {
-      let itemIdentifiers = followers.map { $0.id }
-      snapshot.reconfigureItems(itemIdentifiers)
-   }
    
-   
+   /// Prefetching is done automatically as of iOS15, it did not exists in iOS14 at all.
    private func configureDataSource() {
-      
       let cellRegistration = UICollectionView.CellRegistration<FollowerCell, Follower.ID> { [weak self]
          cell, indexPath, followerID in
          guard let self = self else { return }
@@ -150,7 +157,6 @@ class FollowersListVC15: UIViewController {
    }
    
    
-   
    private func configureSearchController() {
       let searchController                    = UISearchController()
       
@@ -175,8 +181,7 @@ class FollowersListVC15: UIViewController {
             let followers = try await NetworkManager.shared.getFollowers(username: username, page: page)
             if followers.count < 100 { self.hasMoreFollowers.toggle() }
             self.followers.append(contentsOf: followers)
-            self.setInitialData()
-//            self.updateData(on: self.followers)
+            self.updateData(with: followers)
             if self.followers.isEmpty {
                DispatchQueue.main.async {
                   self.showEmptyStateView(with: "Looks like that user has no followers. Go follow them!", in: self.view)
@@ -191,28 +196,24 @@ class FollowersListVC15: UIViewController {
    
    func getNewFollowers(page: Int, on username: String) {
       showLoadingView()
-      NetworkManager.shared.getFollowers(username: username, page: page) { [weak self] (result) in
+      async { [weak self] in
          guard let self = self else { return }
-         self.dismissLoadingView()
-         
-         switch result {
-         case .success(let followers):
+         do {
+            self.dismissLoadingView()
+            let followers = try await NetworkManager.shared.getFollowers(username: username, page: page)
             if followers.count < 100 { self.hasMoreFollowers.toggle() }
             self.followers.append(contentsOf: followers)
-            DispatchQueue.main.async {
-               self.dataSource = nil
-               self.configureDataSource()
-               self.snapshot = nil
-               self.setInitialData()
-            }
+            self.updateData(with: followers)
             
             if self.followers.isEmpty {
-               DispatchQueue.main.async { self.showEmptyStateView(with: "Looks like that user has no followers. Go follow them!", in: self.view) }
+               DispatchQueue.main.async {
+                  self.showEmptyStateView(with: "Looks like that user has no followers. Go follow them!",
+                                                                  in: self.view)
+                  
+               }
             }
-            
-         case .failure(let error):
-            self.presentGFAlerOnMainThred(title: "Ops", message: error.rawValue, button: "Ok")
-         }
+         } catch let error {
+            self.presentGFAlerOnMainThred(title: "Ops", message: error.localizedDescription, button: "Ok")         }
       }
    }
 }
@@ -256,13 +257,13 @@ extension FollowersListVC15: UISearchResultsUpdating, UISearchBarDelegate {
    func updateSearchResults(for searchController: UISearchController) {
       guard let filter = searchController.searchBar.text, !filter.isEmpty else { return }
       filteredFollowers = followers.filter {$0.login.lowercased().contains(filter.lowercased())}
-      shuffleData()
+      updateData(with: filteredFollowers)
       isSearching = true
    }
    
    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
       isSearching = false
-      shuffleData()
+      updateData(with: followers)
    }
 }
 

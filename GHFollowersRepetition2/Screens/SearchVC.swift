@@ -49,23 +49,17 @@ final class SearchVC: UIViewController {
                                        button: "Okey")
          return
       }
-      
       showLoadingView()
-      NetworkManager.shared.getUserInfo(username: usernameTextField.text!) { [weak self] (result) in
+      async { [weak self] in
          guard let self = self else { return }
-         self.dismissLoadingView()
-         switch result {
-         case .success(let user):
-            DispatchQueue.main.async {
-               let followersVC         = FollowersListVC15()
-               followersVC.user        = user
-               self.navigationController?.pushViewController(followersVC, animated: true)
-            }
-            
-         case .failure(let error):
-            self.presentGFAlerOnMainThred(title: "Ops!",
-                                          message: error.rawValue,
-                                          button: "Okay")
+         
+         do {
+            self.dismissLoadingView()
+            let user = try await NetworkManager.shared.getUserInfo(username: usernameTextField.text!)
+            let followerListVC = FollowersListVC15(with: user)
+            self.navigationController?.pushViewController(followerListVC, animated: true)
+         } catch let error {
+            self.presentGFAlerOnMainThred(title: "Ops!", message: error.localizedDescription, button: "Okay")
          }
       }
    }

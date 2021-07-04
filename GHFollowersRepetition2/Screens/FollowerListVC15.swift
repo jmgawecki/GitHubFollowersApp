@@ -174,11 +174,11 @@ class FollowersListVC15: UIViewController {
    
    func getFollowers(page: Int, on username: String) {
       showLoadingView()
-      async { [weak self] in
+      async { [weak self] in // After that line, code after closure started execution, when that code finished completely, we went back here
          guard let self = self else { return }
          do {
             self.dismissLoadingView()
-            let followers = try await NetworkManager.shared.getFollowers(username: username, page: page)
+            let followers = try await NetworkManager.shared.getFollowers(username: username, page: page) // Right after this line, UI updated itself, so the thread was suspende
             if followers.count < 100 { self.hasMoreFollowers.toggle() }
             self.followers.append(contentsOf: followers)
             self.updateData(with: followers)
@@ -190,7 +190,25 @@ class FollowersListVC15: UIViewController {
          } catch let error {
             self.presentGFAlerOnMainThred(title: "Ops", message: error.localizedDescription, button: "Ok")
          }
+         print("Executed")
+         print("Executed")
+         print("Executed")
+         print("Executed")
+         print("Executed")
+         print("Executed")
+         print("Executed")
+         print("Executed")
+         print("Executed")
       }
+      print("Executed")
+      print("Executed")
+      print("Executed")
+      print("Executed")
+      print("Executed")
+      print("Executed")
+      print("Executed")
+      print("Executed")
+      print("Executed")
    }
    
    
@@ -215,6 +233,16 @@ class FollowersListVC15: UIViewController {
          } catch let error {
             self.presentGFAlerOnMainThred(title: "Ops", message: error.localizedDescription, button: "Ok")         }
       }
+      print("Executed")
+      print("Executed")
+      print("Executed")
+      print("Executed")
+      print("Executed")
+      print("Executed")
+      print("Executed")
+      print("Executed")
+      print("Executed")
+      
    }
 }
 

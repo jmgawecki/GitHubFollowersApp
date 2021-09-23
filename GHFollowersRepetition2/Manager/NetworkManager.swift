@@ -16,6 +16,22 @@ class NetworkManager {
     private let baserURL = "https://api.github.com/users/"
     
     private init() {}
+    
+    func getImage(from urlString: String) async throws -> UIImage? {
+        let cacheKey = NSString(string: urlString)
+        if let image = cache.object(forKey: cacheKey) { return image }
+        
+        guard let url = URL(string: urlString) else { return nil }
+
+        let (data, _) = try await URLSession.shared.data(for: URLRequest.init(url: url))
+        
+        let image = UIImage(data: data)
+        if let image = image {
+            self.cache.setObject(image, forKey: NSString.init(string:urlString))
+        }
+        
+        return image
+    }
    
    func getFollowers(username: String, page: Int) async throws -> [Follower] {
       let endpoint = baserURL + "\(username)/followers?per_page=100&page=\(page)"

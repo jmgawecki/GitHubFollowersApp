@@ -8,19 +8,14 @@
 import UIKit
 import SafariServices
 
-// MARK: - Protocol and Delegates
-
- 
+// MARK: - Delegates
 protocol UserInfoVCDelegate: AnyObject {
     func didTapGitHubProfile(for user: User)
     func didTapGetFollowers(for user: User, with follower: Follower)
 }
 
-
 class UserInfoVC: UIViewController {
     // MARK: - Declarations
-    
-    
     let headerView      = UIView()
     let itemViewOne     = UIView()
     let itemViewTwo     = UIView()
@@ -34,8 +29,6 @@ class UserInfoVC: UIViewController {
     
     
     // MARK: - Initialisers
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureVC()
@@ -44,60 +37,45 @@ class UserInfoVC: UIViewController {
         getUserInfo()
     }
     
-    
     // MARK: - Objectives
-    
-    
     @objc func dismissVC() {
         dismiss(animated: true)
     }
-
     
     // MARK: - Network Calls
-    
-    
     func getUserInfo() {
-        NetworkManager.shared.getUserInfo(username: username) { [weak self] (result) in
+        async { [weak self] in
             guard let self = self else { return }
-            
-            switch result {
-            case .success(let user):
-                DispatchQueue.main.async { self.configureUIElements(with: user) }
-                
-            case .failure(let error):
-                self.presentGFAlerOnMainThred(title: "Ops!", message: error.rawValue, button: "Okay")
+            do {
+                self.configureUIElements(with: try await NetworkManager.shared.getUserInfo(username: username))
+            } catch let error {
+                self.presentGFAlerOnMainThred(title: "Ops!", message: error.localizedDescription, button: "Okay")
             }
         }
     }
     
-    
     // MARK: - Layout configurations
-    
-    
     private func configureUIElements(with user: User) {
-            let repoItemVC      = GFRepoItemVC(user: user, follower: follower)
-            repoItemVC.delegate = self
-            
-            let followerItemVC      = GFFollowerItemVC(user: user, follower: follower)
-            followerItemVC.delegate = self
-            
-            self.add(childVC: GFUserInfoHeaderVC(user: user), to: self.headerView)
-            self.add(childVC: repoItemVC, to: self.itemViewOne)
-            self.add(childVC: followerItemVC, to: self.itemViewTwo)
-            self.dateLabel.text = "Github user since \(user.createdAt.convertToDisplayFormat())"
+        let repoItemVC      = GFRepoItemVC(user: user, follower: follower)
+        repoItemVC.delegate = self
+        
+        let followerItemVC      = GFFollowerItemVC(user: user, follower: follower)
+        followerItemVC.delegate = self
+        
+        self.add(childVC: GFUserInfoHeaderVC(user: user), to: self.headerView)
+        self.add(childVC: repoItemVC, to: self.itemViewOne)
+        self.add(childVC: followerItemVC, to: self.itemViewTwo)
+        self.dateLabel.text = "Github user since \(user.createdAt.convertToDisplayFormat())"
     }
-    
     
     private func configureVC() {
         view.backgroundColor = .systemBackground
     }
     
-    
     private func configureDoneButton() {
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissVC))
         navigationItem.rightBarButtonItem = doneButton
     }
-   
     
     private func layoutUI() {
         uiViewsArray = [headerView, itemViewOne, itemViewTwo, dateLabel]
@@ -131,7 +109,6 @@ class UserInfoVC: UIViewController {
         ])
     }
     
-    
     private func add(childVC: UIViewController, to containerView: UIView) {
         addChild(childVC)
         containerView.addSubview(childVC.view)
@@ -140,16 +117,12 @@ class UserInfoVC: UIViewController {
     }
 }
 
-
 // MARK: - Extensions
-
-
 extension UserInfoVC: UserInfoVCDelegate {
     func didTapGitHubProfile(for user: User) {
         guard let url = URL(string: user.htmlUrl) else { presentGFAlerOnMainThred(title: "Oops", message: "wrong website", button: "whateva"); return }
         presentSafariVC(with: url)
     }
-    
     
     func didTapGetFollowers(for user: User, with follower: Follower) {
         delegate.didRequestNewFollowers(with: user, with: follower)

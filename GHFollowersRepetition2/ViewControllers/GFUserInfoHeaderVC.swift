@@ -18,15 +18,15 @@ class GFUserInfoHeaderVC: UIViewController {
     let locationLabel       = GFSecondaryTitleLabel(fontSize: 18)
     let bioLabel            = GFBodyLabel(textAlignment: .left)
     
-    var user: User!
+    var user: User
     
     
     // MARK: - Initialisers
 
     
     init(user: User) {
-        super.init(nibName: nil, bundle: nil)
         self.user = user
+        super.init(nibName: nil, bundle: nil)
     }
     
     

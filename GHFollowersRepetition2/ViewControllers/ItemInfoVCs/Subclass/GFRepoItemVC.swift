@@ -9,23 +9,17 @@ import UIKit
 
 class GFRepoItemVC: GFItemInfoVC {
     // MARK: - Initialisers
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureItems()
     }
     
-    
     // MARK: - Configurations
-    
-    
-    private func configureItems() {
+    fileprivate func configureItems() {
         itemInfoViewOne.set(itemInfoType: .repos, with: user.publicRepos)
         itemInfoViewTwo.set(itemInfoType: .gists, with: user.publicGists)
         actionButton.set(backgroundColor: .systemPurple, title: "GitHub profile")
     }
-    
     
     override func actionButtonTapped() {
         delegate.didTapGitHubProfile(for: user)

@@ -11,8 +11,17 @@ class FollowerCell: UICollectionViewCell {
     // MARK: - Declaration
     static let reuseId      = "FollowerCell"
 
-    let avatarImageView     = GFAvatarImageView(frame: .zero)
-    let usernameLabel       = GFTitleLabel(textAlignment: .center, fontSize: 16)
+    fileprivate lazy var avatarImageView: GFAvatarImageView = {
+        let imageView = GFAvatarImageView(frame: .zero)
+        addSubview(imageView)
+        return imageView
+    }()
+    
+    fileprivate lazy var usernameLabel: GFTitleLabel = {
+        let label = GFTitleLabel(textAlignment: .center, fontSize: 16)
+        addSubview(label)
+        return label
+    }()
 
     // MARK: - Initialiser
     override init(frame: CGRect) {
@@ -27,9 +36,12 @@ class FollowerCell: UICollectionViewCell {
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
     
     // MARK: - Called outside
-    func set(on follower: Follower) {
+    func set(on follower: Follower?) {
+        guard let follower = follower else {
+            return
+        }
         usernameLabel.text  = follower.login
-        avatarImageView.downloadImage(from: follower.avatarUrl)
+        avatarImageView.downloadImage(from: follower.avatarUrl, imageSize: .medium)
     }
     
     // MARK: - Layout configrations

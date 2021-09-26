@@ -798,5 +798,176 @@
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9BB4E31F-2665-4FE1-AE79-D3C81C86C1B5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GHFollowersRepetition2/ViewControllers/GFUserInfoHeaderVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "avatarImgV"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "9BB4E31F-2665-4FE1-AE79-D3C81C86C1B5 - a286c7b8be79c7ef"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GHFollowersRepetition2.GFUserInfoHeaderVC.avatarImgV.getter : GHFollowersRepetition2.GFAvatarImageView"
+                  moduleName = "GHFollowersRepetition2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jakubgawecki/Desktop/Apple/UIKit/Application/GitHubFollowersApp/GHFollowersRepetition2/ViewControllers/GFUserInfoHeaderVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "9BB4E31F-2665-4FE1-AE79-D3C81C86C1B5 - e82aac6acee102d2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; GHFollowersRepetition2.GFAvatarImageView in GHFollowersRepetition2.GFUserInfoHeaderVC.avatarImgV.getter : GHFollowersRepetition2.GFAvatarImageView"
+                  moduleName = "GHFollowersRepetition2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jakubgawecki/Desktop/Apple/UIKit/Application/GitHubFollowersApp/GHFollowersRepetition2/ViewControllers/GFUserInfoHeaderVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "9BB4E31F-2665-4FE1-AE79-D3C81C86C1B5 - 5ae3af2fad48e6fb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GHFollowersRepetition2.GFUserInfoHeaderVC.avatarImgV.setter : GHFollowersRepetition2.GFAvatarImageView"
+                  moduleName = "GHFollowersRepetition2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jakubgawecki/Desktop/Apple/UIKit/Application/GitHubFollowersApp/GHFollowersRepetition2/ViewControllers/GFUserInfoHeaderVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "9BB4E31F-2665-4FE1-AE79-D3C81C86C1B5 - 15f26b0fa7da3d34"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GHFollowersRepetition2.GFUserInfoHeaderVC.avatarImgV.modify : GHFollowersRepetition2.GFAvatarImageView"
+                  moduleName = "GHFollowersRepetition2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jakubgawecki/Desktop/Apple/UIKit/Application/GitHubFollowersApp/GHFollowersRepetition2/ViewControllers/GFUserInfoHeaderVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "9BB4E31F-2665-4FE1-AE79-D3C81C86C1B5 - a7f7921eda17f605"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GHFollowersRepetition2.GFUserInfoHeaderVC.avatarImgV.modify : GHFollowersRepetition2.GFAvatarImageView with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "GHFollowersRepetition2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jakubgawecki/Desktop/Apple/UIKit/Application/GitHubFollowersApp/GHFollowersRepetition2/ViewControllers/GFUserInfoHeaderVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "9BB4E31F-2665-4FE1-AE79-D3C81C86C1B5 - a2f206cb7874c36f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GHFollowersRepetition2.GFUserInfoHeaderVC.init(user: GHFollowersRepetition2.User) -&gt; GHFollowersRepetition2.GFUserInfoHeaderVC"
+                  moduleName = "GHFollowersRepetition2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jakubgawecki/Desktop/Apple/UIKit/Application/GitHubFollowersApp/GHFollowersRepetition2/ViewControllers/GFUserInfoHeaderVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  uuid = "9BB4E31F-2665-4FE1-AE79-D3C81C86C1B5 - 6154cd6eac49e009"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GHFollowersRepetition2.GFUserInfoHeaderVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;GHFollowersRepetition2.GFUserInfoHeaderVC&gt;"
+                  moduleName = "GHFollowersRepetition2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jakubgawecki/Desktop/Apple/UIKit/Application/GitHubFollowersApp/GHFollowersRepetition2/ViewControllers/GFUserInfoHeaderVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "116">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "462C955D-363F-410B-8950-81DD67031099"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GHFollowersRepetition2/CustomViews/ImageViews/GFAvatarImageView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "downloadImage(from:imageSize:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "462C955D-363F-410B-8950-81DD67031099 - 343df1d3a6c1d839"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in GHFollowersRepetition2.GFAvatarImageView.downloadImage(from: Swift.String) -&gt; ()"
+                  moduleName = "GHFollowersRepetition2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jakubgawecki/Desktop/Apple/UIKit/Application/GitHubFollowersApp/GHFollowersRepetition2/CustomViews/ImageViews/GFAvatarImageView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "124">
+               </Location>
+               <Location
+                  uuid = "462C955D-363F-410B-8950-81DD67031099 - b3f8fdbb44c06d65"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) await resume partial function for closure #1 @Sendable () async -&gt; () in GHFollowersRepetition2.GFAvatarImageView.downloadImage(from: Swift.String) -&gt; ()"
+                  moduleName = "GHFollowersRepetition2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jakubgawecki/Desktop/Apple/UIKit/Application/GitHubFollowersApp/GHFollowersRepetition2/CustomViews/ImageViews/GFAvatarImageView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "84">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

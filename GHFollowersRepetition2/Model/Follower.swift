@@ -7,11 +7,22 @@
 
 import UIKit
 
+protocol FollowerProtocol: Codable, Identifiable {
+    var login: String { set get }
+    var avatarUrl: String { set get }
+    var id: String { get }
+}
+
+extension FollowerProtocol {
+    var id: String {
+        return login
+    }
+}
+
 /// Struct conforming to Identifiable instead of Hashable, then ID is given and collectionView is built upon that ID, not the actual Follower instance
-struct Follower: Codable, Identifiable {
-   let login:      String
-   let avatarUrl:  String
-   var id: String { login }
+struct Follower: FollowerProtocol {
+    var login: String
+    var avatarUrl: String
 }
 
 

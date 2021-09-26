@@ -9,41 +9,39 @@ import UIKit
 
 class GFItemInfoView: UIView {
     // MARK: - Declarations
-    
-    
     enum ItemInfoType { case repos, gists, following, followers }
     
-    let symbolImageView = UIImageView()
-    let titleLabel = GFTitleLabel(textAlignment: .left, fontSize: 14)
-    let countLabel = GFTitleLabel(textAlignment: .center, fontSize: 14)
+    private lazy var symbolImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFill
+        imageView.tintColor = .label
+        addSubview(imageView)
+        return imageView
+    }()
     
+    fileprivate lazy var titleLabel: GFTitleLabel = {
+        let label = GFTitleLabel(textAlignment: .left, fontSize: 14)
+        addSubview(label)
+        return label
+    }()
+    
+    fileprivate lazy var countLabel: GFTitleLabel = {
+        let label = GFTitleLabel(textAlignment: .center, fontSize: 14)
+        addSubview(label)
+        return label
+    }()
     
     // MARK: - Initialisers
-    
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
     }
     
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+    required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
     
     // MARK: - Configurations
-    
-    
     private func configure() {
-        self.addSubview(symbolImageView)
-        self.addSubview(titleLabel)
-        self.addSubview(countLabel)
-        
-        symbolImageView.translatesAutoresizingMaskIntoConstraints = false
-        symbolImageView.contentMode = .scaleAspectFill
-        symbolImageView.tintColor   = .label
-        
         NSLayoutConstraint.activate([
             symbolImageView.topAnchor.constraint        (equalTo: self.topAnchor),
             symbolImageView.leadingAnchor.constraint    (equalTo: self.leadingAnchor),
@@ -62,10 +60,7 @@ class GFItemInfoView: UIView {
         ])
     }
     
-    
     // MARK: - Called outside
-    
-    
     func set(itemInfoType: ItemInfoType, with count: Int) {
         switch itemInfoType {
         case .repos:

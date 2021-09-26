@@ -8,129 +8,88 @@
 import UIKit
 
 class GFAlertVC: UIViewController {
-   //MARK: - Declarations
-   
-   
-   let containerView       = UIView()
-   let titleLabel          = GFTitleLabel(textAlignment: .center, fontSize: 20)
-   let bodyLabel           = GFBodyLabel(textAlignment: .center)
-//   let dismissButton       = GFButton(message: "Ok", backgroundColor: .systemPink)
-   let dismissButton15     = GF15ButtonFilled(buttonTitle: "Ok", subtitle: nil, image: nil, color: .systemPink)
-   
-   let padding: CGFloat    = 20
-   
-   var alertTitle:         String?
-   var message:            String?
-   var buttonLabel:        String?
-   
-   
-   // MARK: - Initialisers
-   
-   
-   init(alertTitle: String, message: String, buttonLabel: String) {
-      super.init(nibName: nil, bundle: nil)
-      
-      self.alertTitle     = alertTitle
-      self.message        = message
-      self.buttonLabel    = buttonLabel
-   }
-   
-   
-   override func viewDidLoad() {
-      super.viewDidLoad()
-      configure()
-      configureContainerView()
-      configureTitleLabel()
-      configureDismissButton15()
-      configureBodyLabel()
-      
-   }
-   
-   
-   required init?(coder: NSCoder) {
-      fatalError("init(coder:) has not been implemented")
-   }
-   
-   
-   // MARK: - Objectives
-   
-   
-   @objc func dismissVC() { dismiss(animated: true) }
-   
-   
-   // MARK: - Layout configurations
-   
-   
-   private func configure() { view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.75) }
-   
-   
-   private func configureContainerView() {
-      view.addSubview(containerView)
-      containerView.translatesAutoresizingMaskIntoConstraints = false
-      containerView.backgroundColor       = .systemBackground
-      containerView.layer.cornerRadius    = 16
-      containerView.layer.borderWidth     = 2
-      containerView.layer.borderColor     = UIColor.white.cgColor
-      
-      NSLayoutConstraint.activate([
-         containerView.centerXAnchor.constraint  (equalTo: view.centerXAnchor, constant: 0),
-         containerView.centerYAnchor.constraint  (equalTo: view.centerYAnchor),
-         containerView.heightAnchor.constraint   (equalToConstant: 220),
-         containerView.widthAnchor.constraint    (equalToConstant: 280)
-      ])
-   }
-   
-   
-   private func configureTitleLabel() {
-      view.addSubview(titleLabel)
-      titleLabel.text = alertTitle ?? "Ops"
-      
-      NSLayoutConstraint.activate([
-         titleLabel.topAnchor.constraint         (equalTo: containerView.topAnchor, constant: padding),
-         titleLabel.leadingAnchor.constraint     (equalTo: containerView.leadingAnchor, constant: padding),
-         titleLabel.trailingAnchor.constraint    (equalTo: containerView.trailingAnchor, constant: -padding),
-         titleLabel.heightAnchor.constraint      (equalToConstant: 28)
-      ])
-   }
-   
-   
-//   private func configureDismissButton() {
-//      view.addSubview(dismissButton)
-//      dismissButton.setTitle(buttonLabel ?? "okey dokey", for: .normal)
-//      dismissButton.addTarget(self, action: #selector(dismissVC), for: .touchUpInside)
-//
-//      NSLayoutConstraint.activate([
-//         dismissButton.bottomAnchor.constraint   (equalTo: containerView.bottomAnchor, constant: -padding),
-//         dismissButton.leadingAnchor.constraint  (equalTo: containerView.leadingAnchor, constant: padding),
-//         dismissButton.trailingAnchor.constraint (equalTo: containerView.trailingAnchor, constant: -padding),
-//         dismissButton.heightAnchor.constraint   (equalToConstant: 44)
-//      ])
-//   }
-   
-   private func configureDismissButton15() {
-      view.addSubview(dismissButton15)
-      dismissButton15.configuration?.title = buttonLabel
-      dismissButton15.addTarget(self, action: #selector(dismissVC), for: .touchUpInside)
-      
-      NSLayoutConstraint.activate([
-         dismissButton15.bottomAnchor.constraint   (equalTo: containerView.bottomAnchor, constant: -padding),
-         dismissButton15.leadingAnchor.constraint  (equalTo: containerView.leadingAnchor, constant: padding),
-         dismissButton15.trailingAnchor.constraint (equalTo: containerView.trailingAnchor, constant: -padding),
-         dismissButton15.heightAnchor.constraint   (equalToConstant: 44)
-      ])
-   }
-   
-   
-   private func configureBodyLabel() {
-      view.addSubview(bodyLabel)
-      bodyLabel.text              = message ?? "Something went wrong"
-      bodyLabel.numberOfLines     = 4
-      
-      NSLayoutConstraint.activate([
-         bodyLabel.topAnchor.constraint          (equalTo: titleLabel.bottomAnchor, constant: 8),
-         bodyLabel.leadingAnchor.constraint      (equalTo: containerView.leadingAnchor, constant: padding),
-         bodyLabel.trailingAnchor.constraint     (equalTo: containerView.trailingAnchor, constant: -padding),
-         bodyLabel.bottomAnchor.constraint       (equalTo: dismissButton15.topAnchor, constant: -12)
-      ])
-   }
+    //MARK: - Declarations
+    fileprivate lazy var containerView: UIView = {
+        let container = UIView()
+        view.addSubview(container)
+        container.translatesAutoresizingMaskIntoConstraints = false
+        container.backgroundColor = .systemBackground
+        container.layer.cornerRadius = 16
+        container.layer.borderWidth = 2
+        container.layer.borderColor = UIColor.white.cgColor
+        return container
+    }()
+    
+    fileprivate lazy var titleLabel: GFTitleLabel = {
+        let label = GFTitleLabel(textAlignment: .center, fontSize: 20)
+        view.addSubview(label)
+        label.text = alertTitle ?? "Ops"
+        return label
+    }()
+    
+    fileprivate lazy var bodyLabel: GFBodyLabel = {
+        let label = GFBodyLabel(textAlignment: .center)
+        view.addSubview(label)
+        label.text = message ?? "Something went wrong"
+        label.numberOfLines = 4
+        return label
+    }()
+    
+    fileprivate lazy var dismissButton15: GF15ButtonFilled = {
+        let button = GF15ButtonFilled(buttonTitle: "Ok", subtitle: nil, image: nil, color: .systemPink)
+        view.addSubview(button)
+        button.configuration?.title = buttonLabel
+        button.addTarget(self, action: #selector(dismissVC), for: .touchUpInside)
+        return button
+    }()
+    
+    let padding: CGFloat    = 20
+    
+    var alertTitle: String?
+    var message: String?
+    var buttonLabel: String?
+    
+    // MARK: - Initialisers
+    init(alertTitle: String, message: String, buttonLabel: String) {
+        super.init(nibName: nil, bundle: nil)
+        self.alertTitle = alertTitle
+        self.message = message
+        self.buttonLabel = buttonLabel
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.75)
+        configureContainerView()
+    }
+    
+    required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
+    
+    // MARK: - Objectives
+    @objc func dismissVC() { dismiss(animated: true) }
+    
+    // MARK: - Layout configurations
+    fileprivate func configureContainerView() {
+        NSLayoutConstraint.activate([
+            containerView.centerXAnchor.constraint  (equalTo: view.centerXAnchor, constant: 0),
+            containerView.centerYAnchor.constraint  (equalTo: view.centerYAnchor),
+            containerView.heightAnchor.constraint   (equalToConstant: 220),
+            containerView.widthAnchor.constraint    (equalToConstant: 280),
+            
+            titleLabel.topAnchor.constraint         (equalTo: containerView.topAnchor, constant: padding),
+            titleLabel.leadingAnchor.constraint     (equalTo: containerView.leadingAnchor, constant: padding),
+            titleLabel.trailingAnchor.constraint    (equalTo: containerView.trailingAnchor, constant: -padding),
+            titleLabel.heightAnchor.constraint      (equalToConstant: 28),
+            
+            dismissButton15.bottomAnchor.constraint   (equalTo: containerView.bottomAnchor, constant: -padding),
+            dismissButton15.leadingAnchor.constraint  (equalTo: containerView.leadingAnchor, constant: padding),
+            dismissButton15.trailingAnchor.constraint (equalTo: containerView.trailingAnchor, constant: -padding),
+            dismissButton15.heightAnchor.constraint   (equalToConstant: 44),
+            
+            bodyLabel.topAnchor.constraint          (equalTo: titleLabel.bottomAnchor, constant: 8),
+            bodyLabel.leadingAnchor.constraint      (equalTo: containerView.leadingAnchor, constant: padding),
+            bodyLabel.trailingAnchor.constraint     (equalTo: containerView.trailingAnchor, constant: -padding),
+            bodyLabel.bottomAnchor.constraint       (equalTo: dismissButton15.topAnchor, constant: -12),
+        ])
+    }
 }

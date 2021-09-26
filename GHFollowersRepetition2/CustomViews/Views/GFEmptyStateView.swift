@@ -9,25 +9,29 @@ import UIKit
 
 class GFEmptyStateView: UIView {
     // MARK: - Declarations
+    fileprivate lazy var messageLabel: GFTitleLabel = {
+        let label = GFTitleLabel(textAlignment: .center, fontSize: 28)
+        addSubview(label)
+        label.numberOfLines = 3
+        label.textColor = .secondaryLabel
+        return label
+    }()
     
-    
-    var messageLabel = GFTitleLabel(textAlignment: .center, fontSize: 28)
-    var logoImageView = UIImageView()
+    fileprivate lazy var logoImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(imageView)
+        imageView.image = UIImage(named: "empty-state-logo")
+        return imageView
+    }()
 
-    
     // MARK: - Initialisers
-    
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
     }
     
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+    required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
     
     init(message: String) {
         super.init(frame: .zero)
@@ -35,20 +39,8 @@ class GFEmptyStateView: UIView {
         configure()
     }
     
-    
     // MARK: - Configurations
-    
-    
     private func configure() {
-        addSubview(messageLabel)
-        addSubview(logoImageView)
-        
-        messageLabel.numberOfLines  = 3
-        messageLabel.textColor      = .secondaryLabel
-        
-        logoImageView.image         = UIImage(named: "empty-state-logo")
-        logoImageView.translatesAutoresizingMaskIntoConstraints = false
-        
         NSLayoutConstraint.activate([
             messageLabel.centerYAnchor.constraint   (equalTo: self.centerYAnchor, constant: -150),
             messageLabel.leadingAnchor.constraint   (equalTo: self.leadingAnchor, constant: 40),
@@ -61,5 +53,4 @@ class GFEmptyStateView: UIView {
             logoImageView.bottomAnchor.constraint   (equalTo: self.bottomAnchor, constant: 40)
         ])
     }
-    
 }

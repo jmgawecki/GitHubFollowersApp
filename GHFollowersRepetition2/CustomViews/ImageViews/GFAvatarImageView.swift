@@ -28,11 +28,29 @@ class GFAvatarImageView: UIImageView {
         image = avatarPlaceholder
     }
 
-    //MARK: - Network call    
-    func downloadImage(from urlString: String) {
+    //MARK: - Network call
+    enum GFAvatarImageSize {
+        case small
+        case medium
+        case large
+        case original
+    }
+    
+    func downloadImage(from urlString: String, imageSize: GFAvatarImageSize) {
         async {
             do {
-                image = try await NetworkManager.shared.getImage(from: urlString)
+                let image = try await NetworkManager.shared.getImage(from: urlString)
+                
+                switch imageSize {
+                case .small:
+                    self.image = await image?.byPreparingThumbnail(ofSize: CGSize(width: 60, height: 60))
+                case .medium:
+                    self.image = await image?.byPreparingThumbnail(ofSize: CGSize(width: 90, height: 90))
+                case .large:
+                    self.image = await image?.byPreparingThumbnail(ofSize: CGSize(width: 120, height: 120))
+                case .original:
+                    self.image = image
+                }
             } catch let error {
                 print(error.localizedDescription)
             }

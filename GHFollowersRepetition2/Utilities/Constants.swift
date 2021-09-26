@@ -13,9 +13,4 @@ enum SFSymbols {
     static let following    = "rectangle.stack.person.crop"
     static let followers    = "person.3.fill"
     static let repos        = "folder.fill"
-/**
-    static let repos = "folder.fill"
-    static let gists = "dpad"
-    static let following = "rectangle.stack.person.crop"
-    static let followers = "person.3.fill" */
 }

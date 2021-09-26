@@ -25,7 +25,7 @@ class UserInfoVC: UIViewController {
     var username:       String!
     var follower:       Follower!
     var user:           User!
-    weak var delegate:  FollowerListDelegates15!
+    weak var delegate:  FollowerListDelegates!
     
     
     // MARK: - Initialisers

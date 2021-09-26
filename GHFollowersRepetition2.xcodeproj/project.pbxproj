@@ -44,7 +44,7 @@
 		EF59C580258970B9002FDE69 /* GFAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF59C57F258970B9002FDE69 /* GFAvatarImageView.swift */; };
 		EF59C58525898B01002FDE69 /* GFEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF59C58425898B01002FDE69 /* GFEmptyStateView.swift */; };
 		EF5CD1FB25CB0CC2002671D0 /* FollowersCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5CD1FA25CB0CC2002671D0 /* FollowersCollectionHeaderView.swift */; };
-		EF6B0A6B2675F4AE002B9A6E /* FollowerListVC15.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6B0A6A2675F4AE002B9A6E /* FollowerListVC15.swift */; };
+		EF6B0A6B2675F4AE002B9A6E /* FollowerListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6B0A6A2675F4AE002B9A6E /* FollowerListVC.swift */; };
 		EF703B5E26748E9A00197DFD /* GF15ButtonTinted.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF703B5D26748E9A00197DFD /* GF15ButtonTinted.swift */; };
 		EF703B602674952A00197DFD /* GF15ButtonFilled.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF703B5F2674952A00197DFD /* GF15ButtonFilled.swift */; };
 		EF79DFFD260E0425001B410D /* NetworkCallUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF79DFFC260E0425001B410D /* NetworkCallUnitTest.swift */; };
@@ -123,7 +123,7 @@
 		EF59C57F258970B9002FDE69 /* GFAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAvatarImageView.swift; sourceTree = "<group>"; };
 		EF59C58425898B01002FDE69 /* GFEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFEmptyStateView.swift; sourceTree = "<group>"; };
 		EF5CD1FA25CB0CC2002671D0 /* FollowersCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersCollectionHeaderView.swift; sourceTree = "<group>"; };
-		EF6B0A6A2675F4AE002B9A6E /* FollowerListVC15.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListVC15.swift; sourceTree = "<group>"; };
+		EF6B0A6A2675F4AE002B9A6E /* FollowerListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListVC.swift; sourceTree = "<group>"; };
 		EF703B5D26748E9A00197DFD /* GF15ButtonTinted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GF15ButtonTinted.swift; sourceTree = "<group>"; };
 		EF703B5F2674952A00197DFD /* GF15ButtonFilled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GF15ButtonFilled.swift; sourceTree = "<group>"; };
 		EF79DFFC260E0425001B410D /* NetworkCallUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCallUnitTest.swift; sourceTree = "<group>"; };
@@ -272,7 +272,7 @@
 				EF41B93E25894EBA002D94B4 /* SearchVC.swift */,
 				EF41B94625894EC3002D94B4 /* FavoritesVC.swift */,
 				EFA708F3258A353000B52D95 /* UserInfoVC.swift */,
-				EF6B0A6A2675F4AE002B9A6E /* FollowerListVC15.swift */,
+				EF6B0A6A2675F4AE002B9A6E /* FollowerListVC.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -577,7 +577,7 @@
 				EF8183F3258BCF8A003ABD1E /* GFItemInfoVC.swift in Sources */,
 				EFA70908258A552900B52D95 /* Constants.swift in Sources */,
 				EF703B5E26748E9A00197DFD /* GF15ButtonTinted.swift in Sources */,
-				EF6B0A6B2675F4AE002B9A6E /* FollowerListVC15.swift in Sources */,
+				EF6B0A6B2675F4AE002B9A6E /* FollowerListVC.swift in Sources */,
 				EF59C55825895E0C002FDE69 /* GFAlertVC.swift in Sources */,
 				EF41B93F25894EBA002D94B4 /* SearchVC.swift in Sources */,
 				EFA708F9258A385C00B52D95 /* User.swift in Sources */,

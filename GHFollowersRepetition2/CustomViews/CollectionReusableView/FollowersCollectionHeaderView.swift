@@ -9,71 +9,72 @@ import UIKit
 
 class FollowersCollectionHeaderView: UICollectionReusableView {
     //MARK: - Declarations
-    
-    
     static let reuseId      = "FollowersCollectionHeaderView"
-    let avatarImageView     = GFAvatarImageView(frame: .zero)
-    let usernameLabel       = GFTitleLabel(textAlignment: .left, fontSize: 34)
-    let nameLabel           = GFSecondaryTitleLabel(fontSize: 18)
-    let locationImageView   = UIImageView(frame: .zero)
-    let locationLabel       = GFSecondaryTitleLabel(fontSize: 18)
-    let bioLabel            = GFBodyLabel(textAlignment: .left)
+    
+    fileprivate lazy var avatarImageView: GFAvatarImageView = {
+        let imageView = GFAvatarImageView(frame: .zero)
+        addSubview(imageView)
+        return imageView
+    }()
+    
+    fileprivate lazy var usernameLabel: GFTitleLabel = {
+        let label = GFTitleLabel(textAlignment: .left, fontSize: 34)
+        addSubview(label)
+        return label
+    }()
+    
+    fileprivate lazy var nameLabel: GFSecondaryTitleLabel = {
+        let label = GFSecondaryTitleLabel(fontSize: 18)
+        addSubview(label)
+        return label
+    }()
+    
+    fileprivate lazy var locationImageView: UIImageView = {
+        let imageView = UIImageView(frame: .zero)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(imageView)
+        imageView.image = UIImage(systemName: SFSymbols.location)
+        imageView.tintColor = .systemGreen
+        return imageView
+    }()
+    
+    fileprivate lazy var locationLabel: GFSecondaryTitleLabel = {
+        let label = GFSecondaryTitleLabel(fontSize: 18)
+        addSubview(label)
+        return label
+    }()
+    
+    private lazy var bioLabel: GFBodyLabel = {
+        let label = GFBodyLabel(textAlignment: .left)
+        label.numberOfLines = 3
+        addSubview(label)
+        return label
+    }()
     
     var user: User!
     
-    
     // MARK: - Initialisers
-    
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addSubviews()
         layoutUI()
-        configureUIElements()
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+    required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
     
     //MARK: - Called outside
-    
-    
     func set(with user: User) {
-        avatarImageView.downloadImage(from: user.avatarUrl)
-        usernameLabel.text              = user.login
-        nameLabel.text                  = user.name ?? ""
-        locationLabel.text              = user.location ?? "No location"
-        bioLabel.text                   = user.bio ?? "No bio available"
+        avatarImageView.downloadImage(from: user.avatarUrl, imageSize: .large)
+        usernameLabel.text = user.login
+        nameLabel.text = user.name ?? ""
+        locationLabel.text = user.location ?? "No location"
+        bioLabel.text = user.bio ?? "No bio available"
     }
-    
     
     //MARK: - Layout configuration
-    
-    
-    private func configureUIElements() {
-        bioLabel.numberOfLines          = 3
-        locationImageView.image         = UIImage(systemName: SFSymbols.location)
-        locationImageView.tintColor     = .systemGreen
-    }
-    
-    
-    private func addSubviews() {
-        addSubview(avatarImageView)
-        addSubview(usernameLabel)
-        addSubview(nameLabel)
-        addSubview(locationImageView)
-        addSubview(locationLabel)
-        addSubview(bioLabel)
-    }
-    
-    
-    private func layoutUI() {
-        let outsidePadding:     CGFloat = 13
-        let padding:            CGFloat = 20
-        let textImagePadding:   CGFloat = 12
-        locationImageView.translatesAutoresizingMaskIntoConstraints = false
+    fileprivate func layoutUI() {
+        let outsidePadding: CGFloat = 13
+        let padding: CGFloat = 20
+        let textImagePadding: CGFloat = 12
         
         NSLayoutConstraint.activate([
             avatarImageView.topAnchor.constraint        (equalTo: topAnchor, constant: padding),

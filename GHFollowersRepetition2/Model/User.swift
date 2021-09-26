@@ -8,7 +8,7 @@
 import UIKit
 
 
-protocol UserProtocol {
+protocol UserProtocol: Codable, Hashable {
     var login:          String  { get set }
     var avatarUrl:      String  { get set }
     var name:           String? { get set }
@@ -23,7 +23,7 @@ protocol UserProtocol {
 }
 
 
-struct User: Codable, Hashable, UserProtocol {
+struct User: UserProtocol {
     var login:          String
     var avatarUrl:      String
     var name:           String?

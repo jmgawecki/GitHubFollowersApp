@@ -9,15 +9,15 @@ import UIKit
 
 
 // MARK: - Delegates
-protocol FollowerListDelegates15: AnyObject {
+protocol FollowerListDelegates: NSObject {
     func didRequestNewFollowers(with user: User, with follower: Follower)
 }
 
-class FollowersListVC15: UIViewController {
+final class FollowersListVC: UIViewController {
     // MARK: - Declarations
     enum Section { case main }
     
-    var dataSource:         UICollectionViewDiffableDataSource<Section, Follower.ID>!
+    var dataSource: UICollectionViewDiffableDataSource<Section, Follower.ID>?
     
     var page = 1
     
@@ -91,7 +91,7 @@ class FollowersListVC15: UIViewController {
         snapshot.appendSections([.main])
         let itemIdentifiers = followers.map { $0.id }
         snapshot.appendItems(itemIdentifiers, toSection: .main)
-        dataSource.apply(snapshot, animatingDifferences: true)
+        dataSource?.apply(snapshot, animatingDifferences: true)
         return snapshot
     }()
     
@@ -100,20 +100,25 @@ class FollowersListVC15: UIViewController {
         snapshot.appendSections([.main])
         let itemIdentifiers = followers.map { $0.id }
         snapshot.appendItems(itemIdentifiers, toSection: .main)
-        dataSource.apply(snapshot, animatingDifferences: true)
+        dataSource?.apply(snapshot, animatingDifferences: true)
+    }
+    
+    fileprivate func updateSnapshot(with identifiers: [Follower.ID]) {
+        var snapshot = dataSource?.snapshot()
+        snapshot?.reconfigureItems(identifiers)
+        guard let snapshot = snapshot else { return }
+        dataSource?.apply(snapshot, animatingDifferences: true)
     }
     
     /// Prefetching is done automatically as of iOS15, it did not exists in iOS14 at all.
     fileprivate func configureDataSource() {
+        // Registration outside the dataSource for performance reasons
         let cellRegistration = UICollectionView.CellRegistration<FollowerCell, Follower.ID> { [weak self]
             cell, indexPath, followerID in
             guard let self = self else { return }
-            
-            let followerArray = self.followers.filter { $0.id == followerID }
-            
-            if let follower = followerArray.first {
-                cell.set(on: follower)
-            }
+            // Because the CellRegistration holds the reference to the ID, not the Follower object itself, we need to prefetch it from the array:
+            let follower = (self.followers.filter { $0.id == followerID }).first
+            cell.set(on: follower)
         }
         
         dataSource = UICollectionViewDiffableDataSource<Section, Follower.ID>(collectionView: collectionView) {
@@ -125,7 +130,7 @@ class FollowersListVC15: UIViewController {
         }
         
         let headerRegistration = createSectionHeaderRegistration()
-        dataSource.supplementaryViewProvider = { collectionView, elementKind, indexPath in
+        dataSource?.supplementaryViewProvider = { collectionView, elementKind, indexPath in
             return collectionView.dequeueConfiguredReusableSupplementary(using: headerRegistration, for: indexPath)
         }
     }
@@ -169,6 +174,7 @@ class FollowersListVC15: UIViewController {
                     if followers.count < 100 { self.hasMoreFollowers.toggle() }
                     self.followers.append(contentsOf: followers)
                     self.updateData(with: followers)
+//                    snapshot.reconfigureItems(followers.map { $0.id })
                     if self.followers.isEmpty {
                         DispatchQueue.main.async {
                             self.showEmptyStateView(with: "Looks like that user has no followers. Go follow them!", in: self.view)
@@ -187,7 +193,9 @@ class FollowersListVC15: UIViewController {
                     if followers.count < 100 { self.hasMoreFollowers.toggle() }
                     self.followers.append(contentsOf: followers)
                     self.updateData(with: followers)
-                    
+//                    self.updateSnapshot(with: self.followers.map { $0.id })
+//                    let identifiers = followers.map { $0.id }
+//                    snapshot.reconfigureItems(identifiers)
                     if self.followers.isEmpty {
                         DispatchQueue.main.async {
                             self.showEmptyStateView(with: "Looks like that user has no followers. Go follow them!",
@@ -203,7 +211,7 @@ class FollowersListVC15: UIViewController {
 }
 
 // MARK: - ColletionView Delegate
-extension FollowersListVC15: UICollectionViewDelegate {
+extension FollowersListVC: UICollectionViewDelegate {
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         let offsetY = scrollView.contentOffset.y
         let contentHeight = scrollView.contentSize.height
@@ -212,7 +220,7 @@ extension FollowersListVC15: UICollectionViewDelegate {
         if offsetY > contentHeight - height {
             guard hasMoreFollowers else { return }
             page += 1
-            getFollowers(page: page, on: user.login, forFollowers: .getFirstFollowers)
+            getFollowers(page: page, on: user.login, forFollowers: .getNewFollowers)
         }
     }
     
@@ -231,7 +239,7 @@ extension FollowersListVC15: UICollectionViewDelegate {
 }
 
 // MARK: - SearchBar Delegate
-extension FollowersListVC15: UISearchResultsUpdating, UISearchBarDelegate {
+extension FollowersListVC: UISearchResultsUpdating, UISearchBarDelegate {
     func updateSearchResults(for searchController: UISearchController) {
         guard let filter = searchController.searchBar.text, !filter.isEmpty else { return }
         filteredFollowers = followers.filter {$0.login.lowercased().contains(filter.lowercased())}
@@ -246,7 +254,7 @@ extension FollowersListVC15: UISearchResultsUpdating, UISearchBarDelegate {
 }
 
 // MARK: - FollowerList Delegate
-extension FollowersListVC15: FollowerListDelegates15 {
+extension FollowersListVC: FollowerListDelegates {
     func didRequestNewFollowers(with user: User, with follower: Follower) {
         followers.removeAll()
         filteredFollowers.removeAll()

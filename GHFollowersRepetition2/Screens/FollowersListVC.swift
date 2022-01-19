@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 
 // MARK: - Delegates
@@ -76,6 +77,13 @@ final class FollowersListVC: UIViewController {
         }
     }
     
+    @objc private func activateARCollectionView() {
+        let arCollectionViewScreen = ARSceneViewCotroller(followers: followers, user: user, delegate: self)
+        DispatchQueue.main.async {
+            self.navigationController?.pushViewController(arCollectionViewScreen, animated: true)
+        }
+    }
+    
     // MARK: - Collection View configurations
     fileprivate lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UIHelper.createCompositionalLayout())
@@ -95,7 +103,7 @@ final class FollowersListVC: UIViewController {
         return snapshot
     }()
     
-    fileprivate func updateData(with followers: [Follower]) {
+    func updateData(with followers: [Follower]) {
         snapshot = NSDiffableDataSourceSnapshot<Section, Follower.ID>()
         snapshot.appendSections([.main])
         let itemIdentifiers = followers.map { $0.id }
@@ -140,7 +148,7 @@ final class FollowersListVC: UIViewController {
             elementKind: FollowersCollectionHeaderView.reuseId) { [weak self] supplementaryView, elementKind, indexPath in
             guard let self = self else { return }
             supplementaryView.set(with: self.user)
-        }
+            }
     }
     
     
@@ -148,11 +156,16 @@ final class FollowersListVC: UIViewController {
     
     
     fileprivate func configureVC() {
-        view.backgroundColor                                    = .systemBackground
-        navigationController?.navigationBar.prefersLargeTitles  = true
-        navigationItem.rightBarButtonItem                       = UIBarButtonItem(barButtonSystemItem: .add,
-                                                                                  target: self,
-                                                                                  action: #selector(addButtonTapped))
+        view.backgroundColor = .systemBackground
+        navigationController?.navigationBar.prefersLargeTitles = true
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add,
+                                        target: self,
+                                        action: #selector(addButtonTapped))
+        let arButton = UIBarButtonItem(image: UIImage(systemName: "arkit"),
+                                       style: .plain,
+                                       target: self,
+                                       action: #selector(activateARCollectionView))
+        navigationItem.rightBarButtonItems = [addButton, arButton]
         self.navigationItem.searchController = searchController
     }
     
@@ -185,7 +198,7 @@ final class FollowersListVC: UIViewController {
                 }
             }
         case .getNewFollowers:
-            async { [weak self] in
+            Task.init(priority: .high) { [weak self] in
                 guard let self = self else { return }
                 do {
                     self.dismissLoadingView()
@@ -206,6 +219,27 @@ final class FollowersListVC: UIViewController {
                 } catch let error {
                     self.presentGFAlerOnMainThred(title: "Ops", message: error.localizedDescription, button: "Ok")         }
             }
+//            async { [weak self] in
+//                guard let self = self else { return }
+//                do {
+//                    self.dismissLoadingView()
+//                    let followers = try await NetworkManager.shared.getFollowers(username: username, page: page)
+//                    if followers.count < 100 { self.hasMoreFollowers.toggle() }
+//                    self.followers.append(contentsOf: followers)
+//                    self.updateData(with: followers)
+////                    self.updateSnapshot(with: self.followers.map { $0.id })
+////                    let identifiers = followers.map { $0.id }
+////                    snapshot.reconfigureItems(identifiers)
+//                    if self.followers.isEmpty {
+//                        DispatchQueue.main.async {
+//                            self.showEmptyStateView(with: "Looks like that user has no followers. Go follow them!",
+//                                                    in: self.view)
+//
+//                        }
+//                    }
+//                } catch let error {
+//                    self.presentGFAlerOnMainThred(title: "Ops", message: error.localizedDescription, button: "Ok")         }
+//            }
         }
     }
 }
@@ -262,5 +296,20 @@ extension FollowersListVC: FollowerListDelegates {
         self.user = user
         collectionView.setContentOffset(.zero, animated: true)
         getFollowers(page: page, on: user.login, forFollowers: .getNewFollowers)
+    }
+}
+
+extension FollowersListVC: ARFollowerListVCDelegate {
+    func dismissedARFollowerList(with option: ARFollowerListDismissalOption) {
+        switch option {
+        case .justDismiss:
+            navigationController?.popViewController(animated: true)
+        case .dismissWithFollowers(let followers):
+            navigationController?.popViewController(animated: true)
+            self.followers = followers
+            self.updateData(with: followers)
+        case .dismissAndPresentUser(_):
+            navigationController?.popViewController(animated: true)
+        }
     }
 }

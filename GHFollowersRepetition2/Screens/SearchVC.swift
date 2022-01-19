@@ -22,6 +22,7 @@ final class SearchVC: UIViewController {
         let textField = GFTextField()
         view.addSubview(textField)
         textField.delegate = self
+        textField.autocorrectionType = .no
         return textField
     }()
     

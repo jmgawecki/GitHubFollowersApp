@@ -26,8 +26,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "159"
             endingLineNumber = "159"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "configureVC()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -42,8 +42,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "161"
             endingLineNumber = "161"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "configureVC()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -58,8 +58,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "163"
             endingLineNumber = "163"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "configureVC()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -74,8 +74,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "164"
             endingLineNumber = "164"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "configureVC()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -90,8 +90,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "165"
             endingLineNumber = "165"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "configureVC()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -106,8 +106,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "166"
             endingLineNumber = "166"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "configureVC()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -122,8 +122,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "167"
             endingLineNumber = "167"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "configureVC()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -138,8 +138,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "168"
             endingLineNumber = "168"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "configureVC()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -154,8 +154,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "169"
             endingLineNumber = "169"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "configureVC()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -170,8 +170,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "170"
             endingLineNumber = "170"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "configureVC()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -186,8 +186,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "171"
             endingLineNumber = "171"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "FollowersListVC"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -202,8 +202,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "172"
             endingLineNumber = "172"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "FollowersListVC"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -218,8 +218,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "173"
             endingLineNumber = "173"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "GetFollowersType"
+            landmarkType = "13">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -234,8 +234,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "174"
             endingLineNumber = "174"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "GetFollowersType"
+            landmarkType = "13">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -266,8 +266,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "84"
             endingLineNumber = "84"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "activateARCollectionView()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -282,15 +282,15 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "85"
             endingLineNumber = "85"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "activateARCollectionView()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "309A4CF1-4057-4C7D-B8F5-0B9DC7321727"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GHFollowersRepetition2/Screens/FollowersListVC.swift"
@@ -298,15 +298,47 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "86"
             endingLineNumber = "86"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "FollowersListVC"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "309A4CF1-4057-4C7D-B8F5-0B9DC7321727 - 293fddd39f33c1c1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GHFollowersRepetition2.FollowersListVC.init(with: GHFollowersRepetition2.User) -&gt; GHFollowersRepetition2.FollowersListVC"
+                  moduleName = "GHFollowersRepetition2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jakubgawecki/Desktop/Apple/UIKit/Application/GitHubFollowersApp/GHFollowersRepetition2/Screens/FollowersListVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "416">
+               </Location>
+               <Location
+                  uuid = "309A4CF1-4057-4C7D-B8F5-0B9DC7321727 - 14ebd07fb6f238a5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GHFollowersRepetition2.FollowersListVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;GHFollowersRepetition2.FollowersListVC&gt;"
+                  moduleName = "GHFollowersRepetition2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jakubgawecki/Desktop/Apple/UIKit/Application/GitHubFollowersApp/GHFollowersRepetition2/Screens/FollowersListVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "408">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "C1962508-C0D3-4B66-B0F4-0A4796F16D96"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GHFollowersRepetition2/Screens/FollowersListVC.swift"
@@ -314,15 +346,47 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "87"
             endingLineNumber = "87"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "FollowersListVC"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "C1962508-C0D3-4B66-B0F4-0A4796F16D96 - 293fddd39f33c1c1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GHFollowersRepetition2.FollowersListVC.init(with: GHFollowersRepetition2.User) -&gt; GHFollowersRepetition2.FollowersListVC"
+                  moduleName = "GHFollowersRepetition2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jakubgawecki/Desktop/Apple/UIKit/Application/GitHubFollowersApp/GHFollowersRepetition2/Screens/FollowersListVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "416">
+               </Location>
+               <Location
+                  uuid = "C1962508-C0D3-4B66-B0F4-0A4796F16D96 - 14ebd07fb6f238a5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GHFollowersRepetition2.FollowersListVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;GHFollowersRepetition2.FollowersListVC&gt;"
+                  moduleName = "GHFollowersRepetition2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jakubgawecki/Desktop/Apple/UIKit/Application/GitHubFollowersApp/GHFollowersRepetition2/Screens/FollowersListVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "408">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "85BDA3E1-8EC4-46FB-8863-4A0CB6D090C5"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GHFollowersRepetition2/Screens/FollowersListVC.swift"
@@ -330,15 +394,47 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "88"
             endingLineNumber = "88"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "collectionView"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "85BDA3E1-8EC4-46FB-8863-4A0CB6D090C5 - 293fddd39f33c1c1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GHFollowersRepetition2.FollowersListVC.init(with: GHFollowersRepetition2.User) -&gt; GHFollowersRepetition2.FollowersListVC"
+                  moduleName = "GHFollowersRepetition2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jakubgawecki/Desktop/Apple/UIKit/Application/GitHubFollowersApp/GHFollowersRepetition2/Screens/FollowersListVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "416">
+               </Location>
+               <Location
+                  uuid = "85BDA3E1-8EC4-46FB-8863-4A0CB6D090C5 - 14ebd07fb6f238a5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GHFollowersRepetition2.FollowersListVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;GHFollowersRepetition2.FollowersListVC&gt;"
+                  moduleName = "GHFollowersRepetition2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jakubgawecki/Desktop/Apple/UIKit/Application/GitHubFollowersApp/GHFollowersRepetition2/Screens/FollowersListVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "408">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "733EA3E4-7F78-4878-A180-D48F1BEA8455"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GHFollowersRepetition2/Screens/FollowersListVC.swift"
@@ -346,15 +442,15 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "89"
             endingLineNumber = "89"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "collectionView"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "3779E08F-51E9-447A-99CA-16E7C72619E1"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GHFollowersRepetition2/Screens/FollowersListVC.swift"
@@ -362,15 +458,15 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "90"
             endingLineNumber = "90"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "collectionView"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "9C8AA2FA-F4B1-48B3-AB41-635CE6DF39FE"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GHFollowersRepetition2/Screens/FollowersListVC.swift"
@@ -378,15 +474,15 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "91"
             endingLineNumber = "91"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "collectionView"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A5C18C77-994F-4E3A-8609-9E17D71CCCC6"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GHFollowersRepetition2/Screens/FollowersListVC.swift"
@@ -394,15 +490,15 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "92"
             endingLineNumber = "92"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "collectionView"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "F38172CA-33E2-4E4A-BEC9-5A069B36B22F"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GHFollowersRepetition2/Screens/FollowersListVC.swift"
@@ -410,15 +506,15 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "93"
             endingLineNumber = "93"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "collectionView"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "EC691854-B8E8-4D73-8FB6-071F6AD69C15"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GHFollowersRepetition2/Screens/FollowersListVC.swift"
@@ -426,15 +522,15 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "94"
             endingLineNumber = "94"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "collectionView"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "AE4450F2-57A9-4D83-9782-E3F2CAF48D97"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GHFollowersRepetition2/Screens/FollowersListVC.swift"
@@ -442,15 +538,15 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "95"
             endingLineNumber = "95"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "collectionView"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "C9A49505-CCEB-4976-A022-E496D6B19C6D"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GHFollowersRepetition2/Screens/FollowersListVC.swift"
@@ -458,15 +554,62 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "96"
             endingLineNumber = "96"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "FollowersListVC"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "C9A49505-CCEB-4976-A022-E496D6B19C6D - 293fddd39f33c0fa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GHFollowersRepetition2.FollowersListVC.init(with: GHFollowersRepetition2.User) -&gt; GHFollowersRepetition2.FollowersListVC"
+                  moduleName = "GHFollowersRepetition2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jakubgawecki/Desktop/Apple/UIKit/Application/GitHubFollowersApp/GHFollowersRepetition2/Screens/FollowersListVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "97"
+                  endingLineNumber = "97"
+                  offsetFromSymbolStart = "436">
+               </Location>
+               <Location
+                  uuid = "C9A49505-CCEB-4976-A022-E496D6B19C6D - 14ebd07fb6f2399e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GHFollowersRepetition2.FollowersListVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;GHFollowersRepetition2.FollowersListVC&gt;"
+                  moduleName = "GHFollowersRepetition2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jakubgawecki/Desktop/Apple/UIKit/Application/GitHubFollowersApp/GHFollowersRepetition2/Screens/FollowersListVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "97"
+                  endingLineNumber = "97"
+                  offsetFromSymbolStart = "428">
+               </Location>
+               <Location
+                  uuid = "C9A49505-CCEB-4976-A022-E496D6B19C6D - 8207240a03871c52"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GHFollowersRepetition2.FollowersListVC.snapshot.setter : UIKit.NSDiffableDataSourceSnapshot&lt;GHFollowersRepetition2.FollowersListVC.Section, Swift.String&gt;"
+                  moduleName = "GHFollowersRepetition2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jakubgawecki/Desktop/Apple/UIKit/Application/GitHubFollowersApp/GHFollowersRepetition2/Screens/FollowersListVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "97"
+                  endingLineNumber = "97"
+                  offsetFromSymbolStart = "256">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "DEAD103A-23D5-4F29-BA39-15851596D39B"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GHFollowersRepetition2/Screens/FollowersListVC.swift"
@@ -474,15 +617,62 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "97"
             endingLineNumber = "97"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "snapshot"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "DEAD103A-23D5-4F29-BA39-15851596D39B - 293fddd39f33c0fa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GHFollowersRepetition2.FollowersListVC.init(with: GHFollowersRepetition2.User) -&gt; GHFollowersRepetition2.FollowersListVC"
+                  moduleName = "GHFollowersRepetition2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jakubgawecki/Desktop/Apple/UIKit/Application/GitHubFollowersApp/GHFollowersRepetition2/Screens/FollowersListVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "97"
+                  endingLineNumber = "97"
+                  offsetFromSymbolStart = "436">
+               </Location>
+               <Location
+                  uuid = "DEAD103A-23D5-4F29-BA39-15851596D39B - 14ebd07fb6f2399e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GHFollowersRepetition2.FollowersListVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;GHFollowersRepetition2.FollowersListVC&gt;"
+                  moduleName = "GHFollowersRepetition2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jakubgawecki/Desktop/Apple/UIKit/Application/GitHubFollowersApp/GHFollowersRepetition2/Screens/FollowersListVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "97"
+                  endingLineNumber = "97"
+                  offsetFromSymbolStart = "428">
+               </Location>
+               <Location
+                  uuid = "DEAD103A-23D5-4F29-BA39-15851596D39B - 8207240a03871c52"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GHFollowersRepetition2.FollowersListVC.snapshot.setter : UIKit.NSDiffableDataSourceSnapshot&lt;GHFollowersRepetition2.FollowersListVC.Section, Swift.String&gt;"
+                  moduleName = "GHFollowersRepetition2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jakubgawecki/Desktop/Apple/UIKit/Application/GitHubFollowersApp/GHFollowersRepetition2/Screens/FollowersListVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "97"
+                  endingLineNumber = "97"
+                  offsetFromSymbolStart = "256">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "171868E8-8FB1-4C5C-A711-6AE419510D58"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GHFollowersRepetition2/Screens/FollowersListVC.swift"
@@ -490,15 +680,15 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "98"
             endingLineNumber = "98"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "snapshot"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "605C9FF7-584F-43BF-BF57-314D78AFBA76"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GHFollowersRepetition2/Screens/FollowersListVC.swift"
@@ -506,15 +696,15 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "99"
             endingLineNumber = "99"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "snapshot"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "E3D666FF-2D03-4179-82E3-7100C125301F"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GHFollowersRepetition2/Screens/FollowersListVC.swift"
@@ -522,15 +712,15 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "101"
             endingLineNumber = "101"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "snapshot"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "387CFD62-07AB-447F-9396-EF459B36C229"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GHFollowersRepetition2/Screens/FollowersListVC.swift"
@@ -538,15 +728,15 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "102"
             endingLineNumber = "102"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "snapshot"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "3BCFEA6E-4564-4751-BD1C-8E6A764733F6"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GHFollowersRepetition2/Screens/FollowersListVC.swift"
@@ -554,15 +744,15 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "103"
             endingLineNumber = "103"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "snapshot"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "6FE1E6D7-A14C-4026-AED7-C6287DC2F80E"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GHFollowersRepetition2/Screens/FollowersListVC.swift"
@@ -570,15 +760,15 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "104"
             endingLineNumber = "104"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "snapshot"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "44F74E31-5154-4693-A16B-804CBCC95366"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GHFollowersRepetition2/Screens/FollowersListVC.swift"
@@ -586,15 +776,15 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "105"
             endingLineNumber = "105"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "FollowersListVC"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "FA33E9E8-FFBB-4EC8-8C56-9EB0694466F5"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GHFollowersRepetition2/Screens/FollowersListVC.swift"
@@ -602,15 +792,15 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "106"
             endingLineNumber = "106"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "updateData(with:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "40E7D224-3282-46D6-95FD-3137A37C0983"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GHFollowersRepetition2/Screens/FollowersListVC.swift"
@@ -618,15 +808,15 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "107"
             endingLineNumber = "107"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "updateData(with:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "47860A30-5B48-4C6E-8805-066B0D5B6AE6"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GHFollowersRepetition2/Screens/FollowersListVC.swift"
@@ -634,15 +824,15 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "109"
             endingLineNumber = "109"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "updateData(with:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "77EE7CEA-3C8B-46F3-9FD1-C54CB9F8E0A8"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GHFollowersRepetition2/Screens/FollowersListVC.swift"
@@ -650,8 +840,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "108"
             endingLineNumber = "108"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "updateData(with:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -690,7 +880,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "459DBAF9-635E-40AB-A090-9589E86719EA"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GHFollowersRepetition2/Screens/FollowerListVC15.swift"
@@ -722,7 +912,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "DC1011D0-E9FF-4229-81E8-52045D3FBE39"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GHFollowersRepetition2/Screens/FollowerListVC15.swift"
@@ -738,7 +928,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "3F0F444D-278B-4E89-B1B2-00D019C022EC"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GHFollowersRepetition2/Screens/FollowerListVC15.swift"
@@ -754,7 +944,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "E93E23AB-FF0C-42E7-BD77-0534F729CF07"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GHFollowersRepetition2/Screens/FollowerListVC15.swift"
@@ -770,7 +960,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "1F6DD21C-29F8-4117-A340-5B731BFAA9FD"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GHFollowersRepetition2/Screens/FollowerListVC15.swift"
@@ -786,7 +976,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "0A1D5980-6D7E-412C-909B-F9652B61B25F"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GHFollowersRepetition2/CustomViews/ImageViews/GFAvatarImageView.swift"
@@ -802,7 +992,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "9BB4E31F-2665-4FE1-AE79-D3C81C86C1B5"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GHFollowersRepetition2/ViewControllers/GFUserInfoHeaderVC.swift"
@@ -924,49 +1114,241 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "462C955D-363F-410B-8950-81DD67031099"
-            shouldBeEnabled = "Yes"
+            uuid = "4CB43C7E-F627-4D44-AB48-9E515697EE0F"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GHFollowersRepetition2/CustomViews/ImageViews/GFAvatarImageView.swift"
+            filePath = "GHFollowersRepetition2/ARContent/ARCollectionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "downloadImage(from:imageSize:)"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "init(with:with:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "462C955D-363F-410B-8950-81DD67031099 - 343df1d3a6c1d839"
+                  uuid = "4CB43C7E-F627-4D44-AB48-9E515697EE0F - 597896f04390b4b2"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in GHFollowersRepetition2.GFAvatarImageView.downloadImage(from: Swift.String) -&gt; ()"
+                  symbolName = "GHFollowersRepetition2.ARCollectionViewController.__allocating_init(with: Swift.Array&lt;GHFollowersRepetition2.Follower&gt;, with: GHFollowersRepetition2.User) -&gt; GHFollowersRepetition2.ARCollectionViewController"
                   moduleName = "GHFollowersRepetition2"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jakubgawecki/Desktop/Apple/UIKit/Application/GitHubFollowersApp/GHFollowersRepetition2/CustomViews/ImageViews/GFAvatarImageView.swift"
+                  urlString = "file:///Users/jakubgawecki/Desktop/Apple/UIKit/Application/GitHubFollowersApp/GHFollowersRepetition2/ARContent/ARCollectionViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "124">
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "28">
                </Location>
                <Location
-                  uuid = "462C955D-363F-410B-8950-81DD67031099 - b3f8fdbb44c06d65"
+                  uuid = "4CB43C7E-F627-4D44-AB48-9E515697EE0F - 6255cabe39d70e74"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "(4) await resume partial function for closure #1 @Sendable () async -&gt; () in GHFollowersRepetition2.GFAvatarImageView.downloadImage(from: Swift.String) -&gt; ()"
+                  symbolName = "GHFollowersRepetition2.ARCollectionViewController.init(with: Swift.Array&lt;GHFollowersRepetition2.Follower&gt;, with: GHFollowersRepetition2.User) -&gt; GHFollowersRepetition2.ARCollectionViewController"
                   moduleName = "GHFollowersRepetition2"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jakubgawecki/Desktop/Apple/UIKit/Application/GitHubFollowersApp/GHFollowersRepetition2/CustomViews/ImageViews/GFAvatarImageView.swift"
+                  urlString = "file:///Users/jakubgawecki/Desktop/Apple/UIKit/Application/GitHubFollowersApp/GHFollowersRepetition2/ARContent/ARCollectionViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "84">
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "164">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CAA9F5AC-FFEC-4E51-8E2A-6124011E0CA3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GHFollowersRepetition2/ARContent/ARCollectionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "ARCollectionViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "CAA9F5AC-FFEC-4E51-8E2A-6124011E0CA3 - 597896f04390b4b2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GHFollowersRepetition2.ARCollectionViewController.__allocating_init(with: Swift.Array&lt;GHFollowersRepetition2.Follower&gt;, with: GHFollowersRepetition2.User) -&gt; GHFollowersRepetition2.ARCollectionViewController"
+                  moduleName = "GHFollowersRepetition2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jakubgawecki/Desktop/Apple/UIKit/Application/GitHubFollowersApp/GHFollowersRepetition2/ARContent/ARCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "CAA9F5AC-FFEC-4E51-8E2A-6124011E0CA3 - 6255cabe39d70e74"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GHFollowersRepetition2.ARCollectionViewController.init(with: Swift.Array&lt;GHFollowersRepetition2.Follower&gt;, with: GHFollowersRepetition2.User) -&gt; GHFollowersRepetition2.ARCollectionViewController"
+                  moduleName = "GHFollowersRepetition2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jakubgawecki/Desktop/Apple/UIKit/Application/GitHubFollowersApp/GHFollowersRepetition2/ARContent/ARCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "164">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B4B181C9-8363-43D7-BAD3-9C18EA097304"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GHFollowersRepetition2/ARContent/ARCollectionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "init(with:with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AD98ECDA-906E-4961-820F-262640BC9CAA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GHFollowersRepetition2/ARContent/ARCollectionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "init(with:with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "42D4FDA0-6405-4ACC-AFC3-B4FEA45F6D96"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GHFollowersRepetition2/ARContent/ARCollectionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "init(with:with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9ABA8322-2E9D-41AD-B352-2341634D444C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GHFollowersRepetition2/ARContent/ARFollowersCollection.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
+            landmarkName = "getFollowers(page:on:forFollowers:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "14E5D1A5-A5B8-49B9-9417-4F94E9B2C3EE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GHFollowersRepetition2/ARContent/ARFollowersCollection.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
+            landmarkName = "getFollowers(page:on:forFollowers:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F424B558-9123-4911-A808-1F150B6F3BDB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GHFollowersRepetition2/ARContent/ARFollowersCollection.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
+            landmarkName = "getFollowers(page:on:forFollowers:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "63780938-C5C0-4E3E-8AA5-6CC912390FF0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GHFollowersRepetition2/ARContent/ARFollowersCollection.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "170"
+            endingLineNumber = "170"
+            landmarkName = "getFollowers(page:on:forFollowers:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "329AC19D-1F73-40BB-8EEB-93BC13F45598"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GHFollowersRepetition2/ARContent/ARFollowersCollection.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
+            landmarkName = "getFollowers(page:on:forFollowers:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FBCD1E13-AA47-4AF4-8863-F7D522213B9C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GHFollowersRepetition2/ARContent/ARFollowersCollection.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
+            landmarkName = "getFollowers(page:on:forFollowers:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
